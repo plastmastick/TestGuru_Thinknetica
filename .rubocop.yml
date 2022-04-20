@@ -1,0 +1,19 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+    - '.git/**/*'
+    - 'bin/*'
+  TargetRubyVersion: 3.0
+  SuggestExtensions: false
+
+Metrics/AbcSize:
+  Max: 17
+
+Metrics/ClassLength:
+  Enabled: 191
+
+Style/StringLiterals:
+  Enabled: false

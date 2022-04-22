@@ -27,3 +27,5 @@ Things you may want to cover:
   - Tests
   - Questions
   - Answers
+  - Category (Tests, questions)
+  - Result

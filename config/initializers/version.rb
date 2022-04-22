@@ -1,3 +1,3 @@
 # frozen_string_literal: true
 
-VERSION = "0.1.0"
+TestGuru::Application::VERSION = "0.1.0"

@@ -22,10 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * Entities:
-  - Teachers
-  - Students
-  - Tests
-  - Questions
-  - Answers
-  - Category (Tests, questions)
+  - User
+  - Test
+  - Question
+  - Answer
+  - Category
   - Result

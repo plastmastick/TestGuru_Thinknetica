@@ -8,6 +8,7 @@ AllCops:
     - 'tmp/**/*'
     - '.git/**/*'
     - 'bin/*'
+    - 'db/schema.rb'
   TargetRubyVersion: 3.0
   SuggestExtensions: false
 
@@ -25,3 +26,6 @@ Style/Documentation:
 
 Style/ClassAndModuleChildren:
   EnforcedStyle: compact
+
+Style/NumericLiterals:
+  Enabled: false

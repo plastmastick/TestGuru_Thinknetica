@@ -22,7 +22,7 @@ class TestGuru::Application < Rails::Application
   config.time_zone = "Moscow"
 
   # Permitted locales available for the application
-  I18n.available_locales = [:en, :ru]
+  I18n.available_locales = %i[en ru]
 
   # Set default locale
   I18n.default_locale = :ru

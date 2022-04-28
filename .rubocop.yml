@@ -23,5 +23,5 @@ Style/StringLiterals:
 Style/Documentation:
   Enabled: false
 
-ClassAndModuleChildren:
+Style/ClassAndModuleChildren:
   EnforcedStyle: compact

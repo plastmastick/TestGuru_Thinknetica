@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_28_111502) do
+ActiveRecord::Schema.define(version: 2022_04_28_113657) do
 
   create_table "answers", force: :cascade do |t|
-    t.string "body"
+    t.string "body", null: false
     t.boolean "correct"
     t.integer "question_id"
     t.datetime "created_at", precision: 6, null: false
@@ -21,20 +21,20 @@ ActiveRecord::Schema.define(version: 2022_04_28_111502) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string "title"
+    t.string "title", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "questions", force: :cascade do |t|
-    t.string "body"
+    t.string "body", null: false
     t.integer "test_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "tests", force: :cascade do |t|
-    t.string "title"
+    t.string "title", null: false
     t.integer "level"
     t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
@@ -42,9 +42,9 @@ ActiveRecord::Schema.define(version: 2022_04_28_111502) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "password"
-    t.string "group"
+    t.string "name", null: false
+    t.string "password", null: false
+    t.string "group", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

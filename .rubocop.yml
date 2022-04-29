@@ -25,7 +25,7 @@ Style/Documentation:
   Enabled: false
 
 Style/ClassAndModuleChildren:
-  Enbled: false
+  Enabled: false
 
 Style/NumericLiterals:
   Enabled: false

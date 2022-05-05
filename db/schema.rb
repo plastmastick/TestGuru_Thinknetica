@@ -39,8 +39,6 @@ ActiveRecord::Schema.define(version: 2022_05_04_113220) do
   end
 
   create_table "results", force: :cascade do |t|
-    t.integer "score", default: 0, null: false
-    t.boolean "passed", default: false, null: false
     t.bigint "user_id", null: false
     t.bigint "test_id", null: false
     t.datetime "created_at", precision: 6, null: false

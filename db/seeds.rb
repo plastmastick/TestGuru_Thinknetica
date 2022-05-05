@@ -7,21 +7,21 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-users = User.create(
+users = User.create!(
   [
     { name: 'Student', password: '123', group: 'student' },
     { name: 'Teacher', password: '123!', group: 'teacher' }
   ]
 )
 
-categories = Category.create(
+categories = Category.create!(
   [
     { title: 'Backend' },
     { title: 'Frontend' }
   ]
 )
 
-tests = Test.create(
+tests = Test.create!(
   [
     { title: 'Ruby', author_id: users[1].id, category_id: categories[0].id },
     { title: 'CSS', author_id: users[1].id, category_id: categories[1].id },
@@ -29,7 +29,7 @@ tests = Test.create(
   ]
 )
 
-questions = Question.create(
+questions = Question.create!(
   [
     { body: 'Кто автор Ruby?', test_id: tests[0].id },
     { body: 'Как расшифровывается CSS?', test_id: tests[1].id },
@@ -37,7 +37,7 @@ questions = Question.create(
   ]
 )
 
-Answer.create(
+Answer.create!(
   [
     { body: 'Юкихиро Мацумото', correct: true, question_id: questions[0].id },
     { body: 'Хидики Катаяма', question_id: questions[0].id },
@@ -54,9 +54,9 @@ Answer.create(
   ]
 )
 
-Result.create(
+Result.create!(
   [
-    { score: 1, passed: true, test_id: tests[0].id, user_id: users[0].id },
+    { test_id: tests[0].id, user_id: users[0].id },
     { test_id: tests[1].id, user_id: users[0].id }
   ]
 )

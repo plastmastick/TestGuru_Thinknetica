@@ -33,7 +33,7 @@ questions = Question.create!(
   [
     { body: 'Кто автор Ruby?', test_id: tests[0].id },
     { body: 'Как расшифровывается CSS?', test_id: tests[1].id },
-    { body: 'Какой тэг используется для обозначения ссылок?', test_id: tests[0].id }
+    { body: 'Какой тэг используется для обозначения ссылок?', test_id: tests[2].id }
   ]
 )
 

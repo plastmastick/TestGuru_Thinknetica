@@ -23,40 +23,40 @@ categories = Category.create!(
 
 tests = Test.create!(
   [
-    { title: 'Ruby', author_id: users[1].id, category_id: categories[0].id },
-    { title: 'CSS', author_id: users[1].id, category_id: categories[1].id },
-    { title: 'HTML', author_id: users[1].id, category_id: categories[1].id }
+    { title: 'Ruby', author: users[1], category: categories[0] },
+    { title: 'CSS', author: users[1], category: categories[1] },
+    { title: 'HTML', author: users[1], category: categories[1] }
   ]
 )
 
 questions = Question.create!(
   [
-    { body: 'Кто автор Ruby?', test_id: tests[0].id },
-    { body: 'Как расшифровывается CSS?', test_id: tests[1].id },
-    { body: 'Какой тэг используется для обозначения ссылок?', test_id: tests[2].id }
+    { body: 'Кто автор Ruby?', test: tests[0] },
+    { body: 'Как расшифровывается CSS?', test: tests[1] },
+    { body: 'Какой тэг используется для обозначения ссылок?', test: tests[2] }
   ]
 )
 
 Answer.create!(
   [
-    { body: 'Юкихиро Мацумото', correct: true, question_id: questions[0].id },
-    { body: 'Хидики Катаяма', question_id: questions[0].id },
-    { body: 'Макото Нисида', question_id: questions[0].id },
-    { body: 'Сэтоши Хомма', question_id: questions[0].id },
-    { body: 'Cascading Style Sheets', correct: 1, question_id: questions[1].id },
-    { body: 'Cascading Scalable Sheets', question_id: questions[1].id },
-    { body: 'Cascading Style Scalable', question_id: questions[1].id },
-    { body: 'Cascading Sheets Style', question_id: questions[1].id },
-    { body: 'a', correct: 1, question_id: questions[1].id },
-    { body: 'b', question_id: questions[2].id },
-    { body: 's', question_id: questions[2].id },
-    { body: 'p', question_id: questions[2].id }
+    { body: 'Юкихиро Мацумото', correct: true, question: questions[0] },
+    { body: 'Хидики Катаяма', question: questions[0] },
+    { body: 'Макото Нисида', question: questions[0] },
+    { body: 'Сэтоши Хомма', question: questions[0] },
+    { body: 'Cascading Style Sheets', correct: 1, question: questions[1] },
+    { body: 'Cascading Scalable Sheets', question: questions[1] },
+    { body: 'Cascading Style Scalable', question: questions[1] },
+    { body: 'Cascading Sheets Style', question: questions[1] },
+    { body: 'a', correct: 1, question: questions[1] },
+    { body: 'b', question: questions[2] },
+    { body: 's', question: questions[2] },
+    { body: 'p', question: questions[2] }
   ]
 )
 
 Result.create!(
   [
-    { test_id: tests[0].id, user_id: users[0].id },
-    { test_id: tests[1].id, user_id: users[0].id }
+    { test: tests[0], user: users[0] },
+    { test: tests[1], user: users[0] }
   ]
 )

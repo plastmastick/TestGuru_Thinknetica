@@ -7,7 +7,6 @@ class User < ApplicationRecord
                           dependent: nil, inverse_of: :author
 
   def tests_by_level(search_level)
-    Test.joins(:results)
-        .where(results: { user_id: id }, tests: { level: search_level })
+    tests.where(tests: { level: search_level })
   end
 end

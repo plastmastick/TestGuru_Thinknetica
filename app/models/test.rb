@@ -1,9 +1,17 @@
 # frozen_string_literal: true
 
 class Test < ApplicationRecord
-  def self.tests_name_by_category(category_name)
-    Test.joins('JOIN categories ON tests.category_id = categories.id')
-        .where(categories: { title: category_name })
-        .order('title DESC').pluck(:title)
+  belongs_to :category
+  belongs_to :author, class_name: "User", inverse_of: :author_tests, optional: true
+
+  has_many :questions, dependent: :destroy
+  has_many :results, dependent: :destroy
+  has_many :users, through: :results
+
+  def self.tests_title_by_category(category_title)
+    joins(:category)
+      .where(categories: { title: category_title })
+      .order(title: :desc)
+      .pluck(:title)
   end
 end

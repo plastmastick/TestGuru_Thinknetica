@@ -25,7 +25,7 @@ tests = Test.create!(
   [
     { title: 'Ruby', author: users[1], category: categories[0] },
     { title: 'CSS', author: users[1], category: categories[1] },
-    { title: 'HTML', author: users[1], category: categories[1] }
+    { title: 'HTML', author: nil, category: categories[1] }
   ]
 )
 

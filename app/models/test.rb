@@ -13,14 +13,17 @@ class Test < ApplicationRecord
   validates :level, presence: true,
                     numericality: { greater_than: 0, only_integer: true }
 
-  scope :tests_by_level, ->(value) { where(level: value) }
+  scope :by_level, ->(value) { where(level: value) }
   scope :easy, -> { where(level: 0..1) }
   scope :medium, -> { where(level: 2..4) }
   scope :high, -> { where(level: 5..Float::INFINITY) }
-  scope :tests_title_by_category, lambda { |category_title|
-                                    joins(:category)
-                                      .where(categories: { title: category_title })
-                                      .order(title: :desc)
-                                      .pluck(:title)
-                                  }
+  scope :by_category, lambda { |category_title|
+                        joins(:category)
+                          .where(categories: { title: category_title })
+                          .order(title: :desc)
+                      }
+
+  def self.title_by_category(category_title)
+    by_category(category_title).pluck(:title)
+  end
 end

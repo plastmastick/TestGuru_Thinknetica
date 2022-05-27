@@ -66,7 +66,8 @@ ActiveRecord::Schema.define(version: 2022_05_26_153102) do
     t.string "group", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "email", default: "not specified", null: false
+    t.string "email"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "answers", "questions"

@@ -8,10 +8,22 @@ class Test < ApplicationRecord
   has_many :results, dependent: :destroy
   has_many :users, through: :results
 
-  def self.tests_title_by_category(category_title)
-    joins(:category)
-      .where(categories: { title: category_title })
-      .order(title: :desc)
-      .pluck(:title)
+  validates :title, presence: true,
+                    uniqueness: { scope: :level }
+  validates :level, presence: true,
+                    numericality: { greater_than: 0, only_integer: true }
+
+  scope :by_level, ->(value) { where(level: value) }
+  scope :easy, -> { where(level: 0..1) }
+  scope :medium, -> { where(level: 2..4) }
+  scope :high, -> { where(level: 5..Float::INFINITY) }
+  scope :by_category, lambda { |category_title|
+                        joins(:category)
+                          .where(categories: { title: category_title })
+                          .order(title: :desc)
+                      }
+
+  def self.title_by_category(category_title)
+    by_category(category_title).pluck(:title)
   end
 end

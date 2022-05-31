@@ -8,7 +8,7 @@ AllCops:
     - 'tmp/**/*'
     - '.git/**/*'
     - 'bin/*'
-    - 'db/*'
+    - 'db/**/*'
   TargetRubyVersion: 3.0
   SuggestExtensions: false
 

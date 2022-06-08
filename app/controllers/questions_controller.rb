@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[create]
+  before_action :find_test, only: %i[new create index]
   before_action :find_question, only: %i[show destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
     text = "Questions: "
-    Question.all.pluck(:body).each { |q| text += "\n #{q}" }
+    @test.questions.pluck(:body).each { |q| text += "\n #{q}" }
 
     render plain: text
   end
@@ -18,15 +18,24 @@ class QuestionsController < ApplicationController
   def new; end
 
   def create
-    new_question = Question.create!(test: @test, body: params[:question][:body])
-    redirect_to question_path(new_question) if new_question.persisted?
+    @question = @test.questions.build(question_params)
+    if @question.save
+      redirect_to @question
+    else
+      render :new
+    end
   end
 
   def destroy
     @question.destroy
+    redirect_to test_questions_path(@question.test)
   end
 
   private
+
+  def question_params
+    params.require(:question).permit(:body)
+  end
 
   def find_test
     @test = Test.find(params[:test_id])
@@ -37,6 +46,6 @@ class QuestionsController < ApplicationController
   end
 
   def rescue_with_question_not_found
-    render plain: 'Question was not found'
+    # render plain: 'Question was not found'
   end
 end

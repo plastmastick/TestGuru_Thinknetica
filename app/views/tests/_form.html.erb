@@ -1,0 +1,20 @@
+<%= form_with model: @test, locale: true do |form| %>
+  <%= render 'shared/errors', resource: @test %>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :level %><br>
+    <%= form.text_field :level %>
+  </p>
+
+  <p>
+    <%= form.label :category_id %>
+    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
+  </p><br>
+
+  <%= form.submit %>
+<% end %>

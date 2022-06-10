@@ -9,6 +9,7 @@ AllCops:
     - '.git/**/*'
     - 'bin/*'
     - 'db/**/*'
+    - 'views/**/*'
   TargetRubyVersion: 3.0
   SuggestExtensions: false
 

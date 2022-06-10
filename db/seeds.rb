@@ -47,7 +47,7 @@ Answer.create!(
     { body: 'Cascading Scalable Sheets', question: questions[1] },
     { body: 'Cascading Style Scalable', question: questions[1] },
     { body: 'Cascading Sheets Style', question: questions[1] },
-    { body: 'a', correct: 1, question: questions[1] },
+    { body: 'a', correct: 1, question: questions[2] },
     { body: 'b', question: questions[2] },
     { body: 's', question: questions[2] },
     { body: 'p', question: questions[2] }

@@ -47,7 +47,6 @@ class QuestionsController < ApplicationController
   end
 
   def find_test
-    # byebug
     @test = if @question.nil?
               Test.find(params[:test_id])
             else

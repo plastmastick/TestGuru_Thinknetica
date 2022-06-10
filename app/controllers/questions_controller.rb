@@ -1,21 +1,20 @@
 # frozen_string_literal: true
 
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[new create index]
-  before_action :find_question, only: %i[show destroy]
+  before_action :find_question, only: %i[show edit destroy update]
+  before_action :find_test, only: %i[index edit new create]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
-    text = "Questions: "
-    @test.questions.pluck(:body).each { |q| text += "\n #{q}" }
-
-    render plain: text
+    @questions = @test.questions
   end
 
   def show; end
 
-  def new; end
+  def new
+    @question = Question.new
+  end
 
   def create
     @question = @test.questions.build(question_params)
@@ -26,9 +25,19 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def edit; end
+
   def destroy
     @question.destroy
     redirect_to test_questions_path(@question.test)
+  end
+
+  def update
+    if @question.update(question_params)
+      redirect_to @question
+    else
+      render :edit
+    end
   end
 
   private
@@ -38,7 +47,12 @@ class QuestionsController < ApplicationController
   end
 
   def find_test
-    @test = Test.find(params[:test_id])
+    # byebug
+    @test = if @question.nil?
+              Test.find(params[:test_id])
+            else
+              @question.test
+            end
   end
 
   def find_question

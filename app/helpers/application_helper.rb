@@ -6,4 +6,8 @@ module ApplicationHelper
   def test_level(test)
     TEST_LEVELS[test.level] || :hero
   end
+
+  def current_year
+    Time.zone.now.year
+  end
 end

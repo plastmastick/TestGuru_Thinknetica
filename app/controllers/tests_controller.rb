@@ -10,7 +10,7 @@ class TestsController < ApplicationController
   end
 
   def show
-    redirect_to test_questions_path(@test)
+    @questions = @test.questions
   end
 
   def new
@@ -44,7 +44,7 @@ class TestsController < ApplicationController
   private
 
   def test_params
-    params.require(:test).permit(:title, :level, :category_id)
+    params.require(:test).permit(:title, :level, :category_id, :author_id)
   end
 
   def find_test

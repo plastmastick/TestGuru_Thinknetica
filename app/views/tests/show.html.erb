@@ -12,6 +12,11 @@
 <p>
   <strong>Category:</strong>
   <%= @test.category.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= author_name(@test) %>
 </p><br>
 
 <%= link_to 'Tests list', tests_path %>
@@ -29,5 +34,5 @@
     <th colspan="3">Actions</th>
   </tr>
 
-  <%= render @questions %>
+  <%= render partial: "questions/question", collection:@questions %>
 </table>

@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 module QuestionsHelper
-  def question_header(test)
-    case controller.action_name
+  def question_header(action, test)
+    case action
     when 'edit'
       "Edit '#{test.title}' Question"
     when 'new'

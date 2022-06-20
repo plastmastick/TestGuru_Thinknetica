@@ -9,7 +9,8 @@ AllCops:
     - '.git/**/*'
     - 'bin/*'
     - 'db/**/*'
-  TargetRubyVersion: 3.0
+    - 'views/**/*'
+  TargetRubyVersion: 3.0.0
   SuggestExtensions: false
 
 Metrics/AbcSize:

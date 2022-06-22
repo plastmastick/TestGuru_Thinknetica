@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class TestsController < ApplicationController
-  before_action :find_test, only: %i[show edit update destroy]
+  before_action :set_test, only: %i[show edit update destroy start]
+  before_action :set_user, only: :start
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
@@ -41,14 +42,27 @@ class TestsController < ApplicationController
     end
   end
 
+  def start
+    @user.tests.push(@test)
+    redirect_to find_user_result
+  end
+
   private
 
   def test_params
     params.require(:test).permit(:title, :level, :category_id, :author_id)
   end
 
-  def find_test
+  def set_test
     @test = Test.find(params[:id])
+  end
+
+  def set_user
+    @user = User.first
+  end
+
+  def find_user_result
+    Result.order(id: :desc).find_by(test: @test, user: @user)
   end
 
   def rescue_with_test_not_found

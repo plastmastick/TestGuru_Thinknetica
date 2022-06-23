@@ -44,7 +44,7 @@ class TestsController < ApplicationController
 
   def start
     @user.tests.push(@test)
-    redirect_to find_user_result
+    redirect_to test_passage_result_path(find_user_result)
   end
 
   private

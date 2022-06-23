@@ -1,6 +1,8 @@
 <h1>Pass the '<%= @result.test.title %>' Test</h1>
 
 <b>
+  № <%= @result.test.questions.index(@result.current_question) + 1 %>
+  из <%= @result.test.questions.count %>.
   <%= @result.current_question.body %>
 </b>
 

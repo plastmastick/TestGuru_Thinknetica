@@ -1,0 +1,8 @@
+<h1>Result '<%= @result.test.title %>' Test</h1>
+<p>
+  <%= result_info(@result) %>
+  Your score is
+  <span class=<%= pass_percentage_color(@result) %>> <%= @result.pass_percentage %>%</span>
+</p><br>
+
+<%= link_to 'List of tests', tests_path %>

@@ -11,7 +11,7 @@ module TestsHelper
     if test.author.nil?
       'Unknown'
     else
-      test.author.name
+      test.author.full_name
     end
   end
 end

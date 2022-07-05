@@ -11,7 +11,15 @@
   </head>
 
   <body>
+    <% if logged_in? %>
+      <p class='nav user'>
+        Welcome, <b><%= current_user.full_name %></b> Guru
+        || <%= link_to 'Logout', logout %>
+      </p>
+    <% end %>
+
     <%= yield %>
+
     <%= render 'layouts/footer' %>
   </body>
 </html>

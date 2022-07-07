@@ -5,15 +5,12 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
   helper_method :current_user,
-                :logged_in?,
-                :logout
+                :logged_in?
 
   private
 
   def authenticate_user!
-    unless current_user
-      redirect_to login_path, alert: 'Are you a Guru? Verify your Email and Password please'
-    end
+    redirect_to login_path, alert: 'Are you a Guru? Verify your Email and Password please' unless current_user
   end
 
   def current_user
@@ -22,9 +19,5 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
     current_user.present?
-  end
-
-  def logout
-    session.clear
   end
 end

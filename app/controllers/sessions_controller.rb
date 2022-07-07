@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SessionsController < ApplicationController
   skip_before_action :authenticate_user!
 
@@ -13,5 +15,10 @@ class SessionsController < ApplicationController
       flash.now[:alert] = 'Are you a Guru? Verify your Email and Password please'
       render :new
     end
+  end
+
+  def destroy
+    session.clear
+    redirect_to login_path
   end
 end

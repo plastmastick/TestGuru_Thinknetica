@@ -5,9 +5,10 @@ Rails.application.routes.draw do
 
   get :signup, to: 'users#new'
   get :login, to: 'sessions#new'
+  delete :logout, to: 'sessions#destroy'
 
   resources :users, only: :create
-  resources :sessions, only: :create
+  resources :sessions, only: %i[create destroy]
 
   resources :tests do
     resources :questions, shallow: true, except: :index do

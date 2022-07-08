@@ -6,9 +6,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user,
                 :logged_in?,
-                :store_location,
-                :clear_store_location,
-                :get_store_location
+                :store_location_or_,
+                :clear_store_location
 
   private
 
@@ -28,14 +27,14 @@ class ApplicationController < ActionController::Base
   end
 
   def store_location
-    session[:store_location] = cookies.request.url
+    cookies[:store_location] = request.url
   end
 
   def clear_store_location
-    session[:store_location] = nil
+    cookies.delete :store_location
   end
 
   def store_location_or_(url)
-    session[:store_location].nil? ? url : session[:store_location]
+    cookies[:store_location].nil? ? url : cookies[:store_location]
   end
 end

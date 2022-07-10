@@ -9,8 +9,10 @@
 
 users = User.create!(
   [
-    { name: 'Student', password: '123', group: 'student', email: 'student@test.ru' },
-    { name: 'Teacher', password: '123!', group: 'teacher', email: 'teacher@test.ru' }
+    { full_name: 'Student', password: 'secret', password_confirmation: 'secret',
+      role: 'student', email: 'student@test.ru' },
+    { full_name: 'Teacher', password: 'secret', password_confirmation: 'secret',
+      role: 'teacher', email: 'teacher@test.ru' }
   ]
 )
 

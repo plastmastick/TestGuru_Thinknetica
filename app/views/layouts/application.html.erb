@@ -11,7 +11,21 @@
   </head>
 
   <body>
+    <div class='nav user'>
+      <%= link_to 'TestGuru', root_path %>
+      ||
+      <% if logged_in? %>
+          Welcome, <b><%= current_user.full_name %></b> Guru
+          || <%= link_to 'Logout', logout_path, :method => :delete %>
+      <% elsif request.path == '/login' %>
+          <%= link_to 'Registration', signup_path %>
+      <% else %>
+          <%= link_to 'Login', login_path %>
+      <% end %>
+    </div>
+
     <%= yield %>
+
     <%= render 'layouts/footer' %>
   </body>
 </html>

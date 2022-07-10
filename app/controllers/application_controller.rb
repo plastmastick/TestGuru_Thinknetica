@@ -29,12 +29,4 @@ class ApplicationController < ActionController::Base
   def store_location
     cookies[:store_location] = request.url
   end
-
-  def clear_store_location
-    cookies.delete :store_location
-  end
-
-  def store_location_or_(url)
-    cookies[:store_location].nil? ? url : cookies[:store_location]
-  end
 end

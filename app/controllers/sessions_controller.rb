@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
     set_user_by_email
 
     if @user&.authenticate(params[:password])
-      success_auth
+      session[:user_id] = @user.id
+      redirect_to cookies.delete(:store_location) || root_path
     else
       flash.now[:alert] = 'Are you a Guru? Verify your Email and Password please'
       render :new
@@ -25,11 +26,5 @@ class SessionsController < ApplicationController
 
   def set_user_by_email
     @user = User.find_by(email: params[:email])
-  end
-
-  def success_auth
-    session[:user_id] = @user.id
-    redirect_to store_location_or_(root_path)
-    clear_store_location
   end
 end

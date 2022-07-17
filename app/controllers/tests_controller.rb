@@ -42,8 +42,7 @@ class TestsController < ApplicationController
   end
 
   def start
-    set_user
-    @user.tests.push(@test)
+    current_user.tests.push(@test)
     redirect_to test_passage_result_path(find_user_result)
   end
 
@@ -57,12 +56,8 @@ class TestsController < ApplicationController
     @test = Test.find(params[:id])
   end
 
-  def set_user
-    @user = User.find(session[:user_id])
-  end
-
   def find_user_result
-    Result.order(id: :desc).find_by(test: @test, user: @user)
+    Result.order(id: :desc).find_by(test: @test, user: current_user)
   end
 
   def rescue_with_test_not_found

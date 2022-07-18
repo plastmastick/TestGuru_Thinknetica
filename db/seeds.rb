@@ -9,10 +9,17 @@
 
 users = User.create!(
   [
-    { first_name: 'Student', password: 'secret', password_confirmation: 'secret', email: 'student@test.ru', type: 'User' },
-    { first_name: 'Teacher', password: 'secret', password_confirmation: 'secret', email: 'teacher@test.ru', type: 'User' }
+    { first_name: 'Student', password: 'secret', password_confirmation: 'secret', email: 'student@test.ru' },
+    { first_name: 'Student2', password: 'secret', password_confirmation: 'secret', email: 'student2@test.ru' }
   ]
 )
+
+admin = Admin.create! (
+                        { first_name: 'Admin', last_name: 'Test',
+                          password: 'secret', password_confirmation: 'secret',
+                          email: 'teacher@test.ru',
+                          type: 'Admin' }
+                      )
 
 categories = Category.create!(
   [
@@ -23,8 +30,8 @@ categories = Category.create!(
 
 tests = Test.create!(
   [
-    { title: 'Ruby', author: users[1], category: categories[0] },
-    { title: 'CSS', author: users[1], category: categories[1] },
+    { title: 'Ruby', author: admin, category: categories[0] },
+    { title: 'CSS', author: admin, category: categories[1] },
     { title: 'HTML', author: nil, category: categories[1] }
   ]
 )
@@ -57,6 +64,6 @@ Answer.create!(
 Result.create!(
   [
     { test: tests[0], user: users[0] },
-    { test: tests[1], user: users[0] }
+    { test: tests[1], user: users[1] }
   ]
 )

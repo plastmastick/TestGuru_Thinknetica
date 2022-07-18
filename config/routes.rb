@@ -12,7 +12,7 @@ Rails.application.routes.draw do
                        registrations: 'users/registrations'
                      }
 
-  resources :tests do
+  resources :tests, only: :index do
     resources :questions, shallow: true, except: :index do
       resources :answers, shallow: true, except: :index
     end
@@ -26,5 +26,9 @@ Rails.application.routes.draw do
     member do
       get :test_passage
     end
+  end
+
+  namespace :admin do
+    resources :tests
   end
 end

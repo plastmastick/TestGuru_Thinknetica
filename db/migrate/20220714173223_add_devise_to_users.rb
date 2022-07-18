@@ -37,7 +37,7 @@ class AddDeviseToUsers < ActiveRecord::Migration[6.1]
 
       # Additional attr
       t.rename :full_name, :first_name
-      t.string :last_name, null: false, default: ""
+      t.string :last_name
       t.rename :role, :type
     end
 

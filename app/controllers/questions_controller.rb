@@ -2,7 +2,7 @@
 
 class QuestionsController < ApplicationController
   before_action :find_question, only: %i[show edit destroy update]
-  before_action :find_test, only: %i[edit new create]
+  before_action :find_test, only: %i[new create]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
@@ -27,7 +27,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to test_path(@question.test)
+    redirect_to admin_test_path(@question.test)
   end
 
   def update

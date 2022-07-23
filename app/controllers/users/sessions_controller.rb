@@ -11,7 +11,7 @@ class Users::SessionsController < Devise::SessionsController
   # POST /resource/login
   def create
     super
-    flash_message(:notice, "Привет, #{current_user.full_name}!" )
+    flash_message(:notice, "Привет, #{current_user.full_name}!")
   end
 
   # DELETE /resource/logout

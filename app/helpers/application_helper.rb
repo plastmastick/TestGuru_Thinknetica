@@ -19,7 +19,7 @@ module ApplicationHelper
     flash.each do |type, messages|
       messages = [messages] unless messages.is_a?(Array)
       messages.each do |m|
-        rendered << render(:partial => 'shared/flash', :locals => {:type => type, :message => m}) unless m.blank?
+        rendered << render(partial: 'shared/flash', locals: { type: type, message: m }) if m.present?
       end
     end
     rendered.join.html_safe

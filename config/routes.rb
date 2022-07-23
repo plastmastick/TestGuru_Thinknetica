@@ -9,7 +9,8 @@ Rails.application.routes.draw do
                        sign_out: :logout
                      },
                      controllers: {
-                       registrations: 'users/registrations'
+                       registrations: 'users/registrations',
+                       sessions: 'users/sessions'
                      }
 
   resources :tests, only: :index do

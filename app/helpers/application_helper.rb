@@ -12,9 +12,16 @@ module ApplicationHelper
             rel: 'nofollow, noopener'
   end
 
-  def flash_msg
-    flash.map do | key, msg |
-      content_tag :p, msg, class: "flash #{key}"
-    end.join.html_safe
+  protected
+
+  def render_flash
+    rendered = []
+    flash.each do |type, messages|
+      messages = [messages] unless messages.is_a?(Array)
+      messages.each do |m|
+        rendered << render(:partial => 'shared/flash', :locals => {:type => type, :message => m}) unless m.blank?
+      end
+    end
+    rendered.join.html_safe
   end
 end

@@ -19,7 +19,7 @@ class Admin::TestsController < Admin::BaseController
 
   def create
     @test = Test.new(test_params)
-    @test.author = current_user
+    current_user.author_tests.push(@test)
     if @test.save
       redirect_to [:admin, @test]
     else
@@ -42,11 +42,6 @@ class Admin::TestsController < Admin::BaseController
     end
   end
 
-  def start
-    current_user.tests.push(@test)
-    redirect_to test_passage_result_path(find_user_result)
-  end
-
   private
 
   def test_params
@@ -55,10 +50,6 @@ class Admin::TestsController < Admin::BaseController
 
   def set_test
     @test = Test.find(params[:id])
-  end
-
-  def find_user_result
-    Result.order(id: :desc).find_by(test: @test, user: current_user)
   end
 
   def rescue_with_test_not_found

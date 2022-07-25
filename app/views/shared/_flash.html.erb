@@ -1,1 +1,7 @@
-<%= content_tag :p, message, class: "flash #{type}" %>
+<% messages.each do |type, msg| %>
+  <% if correct_msg_type?(type, msg_type) %>
+    <% msg.each do |text| %>
+      <%= content_tag :p, text, class: "flash #{type}" %>
+    <% end %>
+  <% end %>
+<% end %>

@@ -12,16 +12,7 @@ module ApplicationHelper
             rel: 'nofollow, noopener'
   end
 
-  protected
-
-  def render_flash
-    rendered = []
-    flash.each do |type, messages|
-      messages = [messages] unless messages.is_a?(Array)
-      messages.each do |m|
-        rendered << render(partial: 'shared/flash', locals: { type: type, message: m }) if m.present?
-      end
-    end
-    rendered.join.html_safe
+  def correct_msg_type?(current_type, msg_type)
+    current_type == msg_type || msg_type == :all
   end
 end

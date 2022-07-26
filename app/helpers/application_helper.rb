@@ -12,7 +12,11 @@ module ApplicationHelper
             rel: 'nofollow, noopener'
   end
 
-  def correct_msg_type?(current_type, msg_type)
-    current_type == msg_type || msg_type == :all
+  protected
+
+  def render_messages(msg_type)
+    flash.each { |k, v| add_message(k, v) if k.to_sym == msg_type } if flash
+    current_messages[msg_type].map { |m| content_tag :p, m.to_s, class: "flash #{msg_type}" }
+                 .join.html_safe if current_messages[msg_type].present?
   end
 end

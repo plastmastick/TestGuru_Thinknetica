@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class TestsController < ApplicationController
-  before_action :set_test, only: %i[start]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
@@ -10,6 +9,7 @@ class TestsController < ApplicationController
   end
 
   def start
+    set_test
     current_user.tests.push(set_test)
     redirect_to test_passage_result_path(find_user_result)
   end

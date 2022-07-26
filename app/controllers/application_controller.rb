@@ -5,12 +5,6 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
-  helper_method :current_messages, :add_message, :clear_messages
-
-  def current_messages
-    @@messages ||= {}
-  end
-
   protected
 
   def after_sign_in_path_for(resource)
@@ -18,13 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def add_message(type, text)
-    type = type.to_sym
-    @@messages ||= {}
-    @@messages[type] ||= []
-    @@messages[type].push(text)
-  end
-
-  def clear_messages
-    @@messages = {}
+    flash[type] ||= []
+    flash[type].push(text)
   end
 end

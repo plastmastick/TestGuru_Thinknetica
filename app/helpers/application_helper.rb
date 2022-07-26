@@ -14,9 +14,13 @@ module ApplicationHelper
 
   protected
 
+  # flash types
+  # default: :notice, :alert
+  # custom: :info
   def render_messages(msg_type)
-    flash.each { |k, v| add_message(k, v) if k.to_sym == msg_type } if flash
-    current_messages[msg_type].map { |m| content_tag :p, m.to_s, class: "flash #{msg_type}" }
-                 .join.html_safe if current_messages[msg_type].present?
+    messages = flash[msg_type]
+    messages = [messages] if !messages.is_a?(Array) && !messages.nil?
+    messages.map { |m| content_tag :p, m.to_s, class: "flash #{msg_type}" }
+                 .join.html_safe if messages.present?
   end
 end

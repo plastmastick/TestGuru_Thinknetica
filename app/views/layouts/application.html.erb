@@ -14,15 +14,18 @@
     <div class='nav user'>
       <%= link_to 'TestGuru', root_path %>
       ||
-      <% if logged_in? %>
+      <% if user_signed_in? %>
           Welcome, <b><%= current_user.full_name %></b> Guru
-          || <%= link_to 'Logout', logout_path, :method => :delete %>
-      <% elsif request.path == '/login' %>
-          <%= link_to 'Registration', signup_path %>
+          || <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+      <% elsif request.path == '/gurus/login' %>
+          <%= link_to 'Registration', new_user_registration_path %>
       <% else %>
-          <%= link_to 'Login', login_path %>
+          <%= link_to 'Login', new_user_session_path %>
       <% end %>
     </div>
+
+    <%= render_messages(:alert) %>
+    <%= render_messages(:notice) %>
 
     <%= yield %>
 

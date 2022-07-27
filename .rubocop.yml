@@ -10,6 +10,7 @@ AllCops:
     - 'bin/*'
     - 'db/**/*'
     - 'views/**/*'
+    - 'config/initializers/devise.rb'
   TargetRubyVersion: 3.0.0
   SuggestExtensions: false
 
@@ -30,3 +31,9 @@ Style/ClassAndModuleChildren:
 
 Style/NumericLiterals:
   Enabled: false
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - 'config/routes.rb'
+    - 'config/environments/*'

@@ -1,0 +1,7 @@
+<h1><%=question_header('edit', @question.test)%></h1>
+
+<%= render 'form' %>
+<br>
+
+<%= link_to 'Show', [:admin, @question] %> |
+<%= link_to 'Back', admin_test_path(@question.test) %>

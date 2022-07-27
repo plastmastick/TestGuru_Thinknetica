@@ -10,9 +10,4 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     resource.is_a?(Admin) ? admin_tests_path : super
   end
-
-  def add_message(type, text)
-    flash[type] ||= []
-    flash[type].push(text)
-  end
 end

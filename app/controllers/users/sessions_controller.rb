@@ -10,8 +10,8 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/login
   def create
-    add_message(:info, "Привет, #{current_user.full_name}!") if user_signed_in?
     super
+    flash[:notice] = "Привет, #{current_user.full_name}!" if user_signed_in?
   end
 
   # DELETE /resource/logout

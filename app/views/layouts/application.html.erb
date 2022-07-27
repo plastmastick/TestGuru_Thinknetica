@@ -24,7 +24,8 @@
       <% end %>
     </div>
 
-    <%= render 'shared/flash'%>
+    <%= render_messages(:alert) %>
+    <%= render_messages(:notice) %>
 
     <%= yield %>
 

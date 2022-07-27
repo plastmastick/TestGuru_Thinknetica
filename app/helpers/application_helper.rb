@@ -16,7 +16,6 @@ module ApplicationHelper
 
   # flash types
   # default: :notice, :alert
-  # custom: :info
   def render_messages(msg_type)
     messages = flash[msg_type]
     messages = [messages] if !messages.is_a?(Array) && !messages.nil?

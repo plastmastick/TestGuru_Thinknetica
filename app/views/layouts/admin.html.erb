@@ -9,7 +9,8 @@
 
   <body>
     <%= render 'admin/nav' %>
-    <%= render 'shared/flash'%>
+    <%= render_messages(:alert) %>
+    <%= render_messages(:notice) %>
 
     <%= yield %>
   </body>

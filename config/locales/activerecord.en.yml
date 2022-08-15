@@ -1,0 +1,13 @@
+en:
+  models:
+    test: "Test"
+
+  attributes:
+    test:
+      title: "Title"
+      level: "Level"
+      category_id: "Category"
+
+  errors:
+    messages:
+      blank: "can't be blank"

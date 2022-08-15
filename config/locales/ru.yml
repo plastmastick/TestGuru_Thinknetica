@@ -1,16 +1,9 @@
 ru:
   hello: "Привет мир"
 
-#  helpers:
-#    submit:
-#      test:
-#        create: "Создать Тест"
-#        update: "Обновить Тест"
-#    label:
-#      test:
-#        title: "Название"
-#        level: "Уровень"
-#        category_id: "Категория"
+  helpers:
+    select:
+      prompt: "Пожалуйста, выберите"
 
   tests:
     index:
@@ -27,6 +20,7 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибок"
+
   admin:
     tests:
       create:

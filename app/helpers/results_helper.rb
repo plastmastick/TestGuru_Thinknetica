@@ -3,9 +3,9 @@
 module ResultsHelper
   def result_info(result)
     if result.success_pass?
-      'Test passed.'
+      t('helpers.results.result_info.test_passed')
     else
-      'Test failed.'
+      t('helpers.results.result_info.test_failed')
     end
   end
 

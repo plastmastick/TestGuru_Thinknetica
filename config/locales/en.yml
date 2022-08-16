@@ -38,6 +38,7 @@ en:
       edit: "Edit"
       delete: "Delete"
       back: "Back"
+      next: "Next"
     tests:
       unknown: "Unknown"
       levels:
@@ -46,6 +47,10 @@ en:
         advanced: "Advanced"
         hard: "Hard"
         epic: "Epic"
+    results:
+      result_info:
+        test_passed: "Test passed."
+        test_failed: "Test failed."
     select:
       prompt: "Please select"
     label:
@@ -69,8 +74,12 @@ en:
       actions: "Actions"
 
   results:
+    test_passage:
+      header: "Pass the '<%= @result.test.title %>' Tests"
     show:
       header: "The '%{title}' Test was completed!"
+      your_score: "Your score is"
+      tests_list: "Test list"
 
   shared:
     errors:

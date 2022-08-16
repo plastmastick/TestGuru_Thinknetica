@@ -7,6 +7,7 @@ ru:
       edit: "Изменить"
       delete: "Удалить"
       back: "Назад"
+      next: "Далее"
     tests:
       unknown: "Неизвестно"
       levels:
@@ -15,6 +16,10 @@ ru:
         advanced: "Продвинутый"
         hard: "Сложный"
         epic: "Эпический"
+    results:
+      result_info:
+        test_passed: "Тест пройден."
+        test_failed: "Тест провален."
     select:
       prompt: "Пожалуйста, выберите"
     label:
@@ -38,8 +43,12 @@ ru:
       actions: "Действия"
 
   results:
+    test_passage:
+      header: "Прохождения теста '%{title}'"
     show:
       header: "Тест '%{title}' завершён!"
+      your_score: "Ваш результат"
+      tests_list: "Список тестов"
 
   shared:
     errors:

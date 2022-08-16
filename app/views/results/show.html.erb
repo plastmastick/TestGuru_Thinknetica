@@ -1,8 +1,8 @@
 <h1><%= t('.header', title: @result.test.title) %></h1>
 <p>
   <%= result_info(@result) %>
-  Your score is
+  <%= t('.your_score') %>
   <span class=<%= pass_percentage_color(@result) %>> <%= @result.pass_percentage %>%</span>
 </p><br>
 
-<%= link_to 'List of tests', tests_path %>
+<%= link_to t('.tests_list'), tests_path %>

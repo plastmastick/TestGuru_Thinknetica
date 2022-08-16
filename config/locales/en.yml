@@ -49,6 +49,14 @@ en:
     select:
       prompt: "Please select"
 
+  layouts:
+    nav:
+      title: "TestGuru"
+      welcome: "Welcome"
+      logout: "Log out"
+      registration: "Registration"
+      login: "Log in"
+
   tests:
     test:
       start: "Start"
@@ -71,7 +79,7 @@ en:
     nav:
       title: "TestGuru Admin Panel"
       welcome: "Welcome"
-      logout: "Logout"
+      logout: "Log out"
     tests:
       test:
         confirm: "Are you sure?"

@@ -18,6 +18,14 @@ ru:
     select:
       prompt: "Пожалуйста, выберите"
 
+  layouts:
+    nav:
+      title: "TestGuru"
+      welcome: "Добро пожаловать"
+      logout: "Выход"
+      registration: "Регистрация"
+      login: "Вход"
+
   tests:
     test:
       start: "Начать"

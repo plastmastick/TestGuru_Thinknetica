@@ -2,12 +2,29 @@ ru:
   hello: "Привет мир"
 
   helpers:
+    buttons:
+      show: "Открыть"
+      edit: "Изменить"
+      delete: "Удалить"
+      back: "Назад"
+    tests:
+      unknown: "Неизвестно"
+      levels:
+        easy: "Лёгкий"
+        elementary: "Начальный"
+        advanced: "Продвинутый"
+        hard: "Сложный"
+        epic: "Эпический"
     select:
       prompt: "Пожалуйста, выберите"
 
   tests:
+    test:
+      start: "Начать"
     index:
       header: "Доступные Тесты"
+      questions_count: "Кол-во вопросов"
+      actions: "Действия"
 
   results:
     show:
@@ -22,12 +39,34 @@ ru:
         other: "Обнаружено %{count} ошибок"
 
   admin:
+    nav:
+      title: "TestGuru Панель Администратора"
+      welcome: "Добро пожаловать"
+      logout: "Выход"
     tests:
+      test:
+        confirm: "Вы уверены?"
       create:
         success: "Тест успешно создан"
+      new:
+        header: "Создать новый тест"
+      edit:
+        header: "Изменить '%{title}' Тест"
       index:
         header: "Доступные Тесты"
+        questions_count: "Кол-во вопросов"
+        actions: "Действия"
+        new_test: "Новый тест"
+      show:
+        header: "Тест"
+        questions: "Вопросы"
+        new_question: "Новый вопрос"
+        answers_count: "Количество ответов"
+        actions: "Действия"
+    questions:
+      question:
+        confirm: "Вы уверены?"
 
   tests_mailer:
     completed_test:
-      subject: "You just completed the TestGuru test!"
+      subject: "Вы успешно завершили тест на TestGuru!"

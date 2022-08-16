@@ -1,13 +1,17 @@
 en:
-  models:
-    test: "Test"
+  activerecord:
+    models:
+      test: "Test"
 
-  attributes:
-    test:
-      title: "Title"
-      level: "Level"
-      category_id: "Category"
+    attributes:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+        author_id: "Author"
+      question:
+        body: "Body"
 
-  errors:
-    messages:
-      blank: "can't be blank"
+    errors:
+      messages:
+        blank: "can't be blank"

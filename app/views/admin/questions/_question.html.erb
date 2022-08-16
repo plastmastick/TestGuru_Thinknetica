@@ -2,11 +2,11 @@
   <td><%= @questions.index(question) + 1 %></td>
   <td><%= question.body.capitalize %></td>
   <td><%= question.answers.count %></td>
-  <td><%= link_to 'Show', admin_question_path(question) %></td>
-  <td><%= link_to 'Edit', edit_admin_question_path(question) %></td>
-  <td><%= link_to 'Delete',
+  <td><%= link_to t('helpers.buttons.show'), admin_question_path(question) %></td>
+  <td><%= link_to t('helpers.buttons.edit'), edit_admin_question_path(question) %></td>
+  <td><%= link_to t('helpers.buttons.delete'),
                   admin_question_path(question),
                   :method => :delete,
-                  data: { confirm: 'Are you sure?' } %>
+                  data: { confirm: t('.confirm') } %>
   </td>
 </tr>

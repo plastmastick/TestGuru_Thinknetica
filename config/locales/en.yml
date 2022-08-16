@@ -33,12 +33,29 @@ en:
   hello: "Hello world"
 
   helpers:
+    buttons:
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
+      back: "Back"
+    tests:
+      unknown: "Unknown"
+      levels:
+        easy: "Easy"
+        elementary: "Elementary"
+        advanced: "Advanced"
+        hard: "Hard"
+        epic: "Epic"
     select:
       prompt: "Please select"
 
   tests:
+    test:
+      start: "Start"
     index:
       header: "Available Tests"
+      questions_count: "Questions count"
+      actions: "Actions"
 
   results:
     show:
@@ -51,12 +68,34 @@ en:
         other: "%{count} errors detected"
 
   admin:
+    nav:
+      title: "TestGuru Admin Panel"
+      welcome: "Welcome"
+      logout: "Logout"
     tests:
+      test:
+        confirm: "Are you sure?"
       create:
         success: "Test was successfully created"
+      new:
+        header: "Create new test"
+      edit:
+        header: "Edit '%{title}' Test"
       index:
         header: "Available Tests"
+        questions_count: "Questions count"
+        actions: "Actions"
+        new_test: "New test"
+      show:
+        header: "Test"
+        questions: "Questions"
+        new_question: "New question"
+        answers_count: "Answers count"
+        actions: "Actions"
+    questions:
+      question:
+        confirm: "Are you sure?"
 
   tests_mailer:
     completed_test:
-      subject: "Вы успешно завершили тест на TestGuru!"
+      subject: "You just completed the TestGuru test!"

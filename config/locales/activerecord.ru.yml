@@ -5,6 +5,7 @@ ru:
       test: "Тест"
       question: "Вопрос"
       answer: "Ответ"
+      user: "Пользователь"
 
     attributes:
       test:
@@ -15,6 +16,12 @@ ru:
         author_id: "Автор"
       question:
         body: "Содержимое"
+      user:
+        email: "Почтовый адрес"
+        first_name: "Имя"
+        last_name: "Фамилия"
+        password: "Пароль"
+        password_confirmation: "Подтвердите пароль"
 
     errors:
       messages:

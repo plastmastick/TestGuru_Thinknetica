@@ -17,14 +17,17 @@ ru:
         epic: "Эпический"
     select:
       prompt: "Пожалуйста, выберите"
+    label:
+      user:
+        remember_me: "Запомнить меня"
 
   layouts:
     nav:
       title: "TestGuru"
       welcome: "Добро пожаловать"
       logout: "Выход"
-      registration: "Регистрация"
-      login: "Вход"
+      signup: "Зарегистрироваться"
+      login: "Авторизироваться"
 
   tests:
     test:

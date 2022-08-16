@@ -48,13 +48,16 @@ en:
         epic: "Epic"
     select:
       prompt: "Please select"
+    label:
+      user:
+        remember_me: "Remember me"
 
   layouts:
     nav:
       title: "TestGuru"
       welcome: "Welcome"
       logout: "Log out"
-      registration: "Registration"
+      signup: "Sign up"
       login: "Log in"
 
   tests:

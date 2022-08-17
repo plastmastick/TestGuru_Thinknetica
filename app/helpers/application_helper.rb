@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
+  # Using for convert default flash types to bootstrap alerts types
+  ALERTS_TYPES = {
+    notice: :info,
+    alert: :danger
+  }.freeze
+
   def current_year
     Time.zone.now.year
   end
@@ -19,7 +25,13 @@ module ApplicationHelper
   def render_messages(msg_type)
     messages = flash[msg_type]
     messages = [messages] if !messages.is_a?(Array) && !messages.nil?
-    messages.map { |m| content_tag :p, m.to_s, class: "flash #{msg_type}" }
-                 .join.html_safe if messages.present?
+    return if messages.blank?
+
+    messages.map do |m|
+      content_tag :p, m.to_s,
+                  class: "alert alert-#{ALERTS_TYPES[msg_type] || :danger} mt-3",
+                  role: "alert"
+    end
+            .join.html_safe
   end
 end

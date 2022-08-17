@@ -62,7 +62,7 @@ en:
       start: "Start"
     index:
       header: "Available Tests"
-      questions_count: "Questions count"
+      questions_count: "Questions"
       actions: "Actions"
 
   results:
@@ -101,14 +101,14 @@ en:
         header: "Edit '%{title}' Test"
       index:
         header: "Available Tests"
-        questions_count: "Questions count"
+        questions_count: "Questions"
         actions: "Actions"
         new_test: "New test"
       show:
         header: "Test"
         questions: "Questions"
         new_question: "New question"
-        answers_count: "Answers count"
+        answers_count: "Answers"
         actions: "Actions"
     questions:
       question:

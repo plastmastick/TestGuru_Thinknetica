@@ -31,7 +31,7 @@ ru:
       start: "Начать"
     index:
       header: "Доступные Тесты"
-      questions_count: "Кол-во вопросов"
+      questions_count: "Вопросов"
       actions: "Действия"
 
   results:
@@ -72,14 +72,14 @@ ru:
         header: "Изменить '%{title}' Тест"
       index:
         header: "Доступные Тесты"
-        questions_count: "Кол-во вопросов"
+        questions_count: "Вопросов"
         actions: "Действия"
         new_test: "Новый тест"
       show:
         header: "Тест"
         questions: "Вопросы"
         new_question: "Новый вопрос"
-        answers_count: "Количество ответов"
+        answers_count: "Ответов"
         actions: "Действия"
     questions:
       question:

@@ -30,7 +30,7 @@ module ApplicationHelper
 
     messages.map do |m|
       content_tag :p, m.to_s,
-                  class: "alert alert-#{ALERTS_TYPES[msg_type] || :danger} mt-3",
+                  class: "alert alert-#{ALERTS_TYPES[msg_type] || :danger} mt-3 text-center",
                   role: "alert"
     end
             .join.html_safe

@@ -1,9 +1,19 @@
-<footer>
-  <p>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted fixed-bottom ">
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © <%= current_year %>
-    Plastmastick
-    <%= github_url('plastmastick', 'TestGuru')%>
-    <%= link_to 'Учебный проект в онлайн-школе Thinknetica','http://thinknetica.com/',
-        target: :_blank, rel: :nofollow, rel: :noopener%>
-  </p>
+    Copyright:
+    <span class="text-reset fw-bold">
+      <%= github_url('plastmastick', 'TestGuru')%>
+    </span>
+    <p>
+      <%= link_to 'Учебный проект в онлайн-школе Thinknetica','http://thinknetica.com/',
+                  target: '_blank',
+                  class: "text-reset fw-bold",
+                  rel: 'nofollow, noopener'%>
+    </p>
+  </div>
+  <!-- Copyright -->
 </footer>
+<!-- Footer -->

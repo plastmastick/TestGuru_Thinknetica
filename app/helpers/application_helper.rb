@@ -12,10 +12,11 @@ module ApplicationHelper
   end
 
   def github_url(author, repo)
-    link_to 'Github, TestGuru',
+    link_to "#{author.capitalize} Github, '#{repo.capitalize}'",
             "https://github.com/#{author}/#{repo}",
-            target: :_blank,
-            rel: 'nofollow, noopener'
+            target: '_blank',
+            rel: 'nofollow, noopener',
+            class: "text-reset fw-bold text-decoration-none"
   end
 
   protected

@@ -26,14 +26,6 @@ ru:
       user:
         remember_me: "Запомнить меня"
 
-  layouts:
-    nav:
-      title: "TestGuru"
-      welcome: "Добро пожаловать"
-      logout: "Выход"
-      signup: "Зарегистрироваться"
-      login: "Авторизироваться"
-
   tests:
     test:
       start: "Начать"
@@ -51,6 +43,12 @@ ru:
       tests_list: "Список тестов"
 
   shared:
+    nav:
+      title: "TestGuru"
+      welcome: "Добро пожаловать"
+      logout: "Выход"
+      signup: "Зарегистрироваться"
+      login: "Авторизироваться"
     errors:
       header:
         few: "Обнаружено %{count} ошибки"

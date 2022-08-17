@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <head>
     <title>TestGuru</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,13 +14,15 @@
   </head>
 
   <body>
-    <%= render 'layouts/nav' %>
+    <%= render 'shared/nav' %>
 
-    <%= render_messages(:alert) %>
-    <%= render_messages(:notice) %>
+    <div class="container">
+      <%= render_messages(:alert) %>
+      <%= render_messages(:notice) %>
 
-    <%= yield %>
+      <%= yield %>
 
-    <%= render 'layouts/footer' %>
+      <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>

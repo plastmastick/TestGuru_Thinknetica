@@ -31,3 +31,91 @@
 
 en:
   hello: "Hello world"
+
+  helpers:
+    buttons:
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
+      back: "Back"
+      next: "Next"
+    tests:
+      unknown: "Unknown"
+      levels:
+        easy: "Easy"
+        elementary: "Elementary"
+        advanced: "Advanced"
+        hard: "Hard"
+        epic: "Epic"
+    results:
+      result_info:
+        test_passed: "Test passed."
+        test_failed: "Test failed."
+    select:
+      prompt: "Please select"
+    label:
+      user:
+        remember_me: "Remember me"
+
+  layouts:
+    nav:
+      title: "TestGuru"
+      welcome: "Welcome"
+      logout: "Log out"
+      signup: "Sign up"
+      login: "Log in"
+
+  tests:
+    test:
+      start: "Start"
+    index:
+      header: "Available Tests"
+      questions_count: "Questions count"
+      actions: "Actions"
+
+  results:
+    test_passage:
+      header: "Pass the '<%= @result.test.title %>' Tests"
+    show:
+      header: "The '%{title}' Test was completed!"
+      your_score: "Your score is"
+      tests_list: "Test list"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  admin:
+    nav:
+      title: "TestGuru Admin Panel"
+      welcome: "Welcome"
+      logout: "Log out"
+    tests:
+      test:
+        confirm: "Are you sure?"
+      create:
+        success: "Test was successfully created"
+      new:
+        header: "Create new test"
+      edit:
+        header: "Edit '%{title}' Test"
+      index:
+        header: "Available Tests"
+        questions_count: "Questions count"
+        actions: "Actions"
+        new_test: "New test"
+      show:
+        header: "Test"
+        questions: "Questions"
+        new_question: "New question"
+        answers_count: "Answers count"
+        actions: "Actions"
+    questions:
+      question:
+        confirm: "Are you sure?"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"

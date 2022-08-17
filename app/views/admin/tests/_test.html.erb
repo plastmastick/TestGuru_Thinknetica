@@ -5,11 +5,17 @@
   <td><%= test.category.title %></td>
   <td><%= test.questions.count %></td>
   <td><%= author_name(test) %></td>
-  <td><%= link_to 'Show', admin_test_path(test) %></td>
-  <td><%= link_to 'Edit', edit_admin_test_path(test) %></td>
-  <td><%= link_to 'Delete',
+  <td><%= button_to t('helpers.buttons.show'),
+                    admin_test_path(test),
+                    method: :get %>
+  </td>
+  <td><%= button_to t('helpers.buttons.edit'),
+                    edit_admin_test_path(test),
+                    method: :get %>
+  </td>
+  <td><%= button_to t('helpers.buttons.delete'),
                   admin_test_path(test),
                   :method => :delete,
-                  data: { confirm: 'Are you sure?' }%>
+                  data: { confirm: t('.confirm') }%>
   </td>
 </tr>

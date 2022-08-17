@@ -26,6 +26,6 @@ module TestGuru
     I18n.available_locales = %i[en ru]
 
     # Set default locale
-    I18n.default_locale = :en
+    I18n.default_locale = :ru
   end
 end

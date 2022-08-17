@@ -1,33 +1,92 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 ru:
-  hello: "Hello world"
+  hello: "Привет мир"
+
+  helpers:
+    buttons:
+      show: "Открыть"
+      edit: "Изменить"
+      delete: "Удалить"
+      back: "Назад"
+      next: "Далее"
+    tests:
+      unknown: "Неизвестно"
+      levels:
+        easy: "Лёгкий"
+        elementary: "Начальный"
+        advanced: "Продвинутый"
+        hard: "Сложный"
+        epic: "Эпический"
+    results:
+      result_info:
+        test_passed: "Тест пройден."
+        test_failed: "Тест провален."
+    select:
+      prompt: "Пожалуйста, выберите"
+    label:
+      user:
+        remember_me: "Запомнить меня"
+
+  layouts:
+    nav:
+      title: "TestGuru"
+      welcome: "Добро пожаловать"
+      logout: "Выход"
+      signup: "Зарегистрироваться"
+      login: "Авторизироваться"
+
+  tests:
+    test:
+      start: "Начать"
+    index:
+      header: "Доступные Тесты"
+      questions_count: "Кол-во вопросов"
+      actions: "Действия"
+
+  results:
+    test_passage:
+      header: "Прохождения теста '%{title}'"
+    show:
+      header: "Тест '%{title}' завершён!"
+      your_score: "Ваш результат"
+      tests_list: "Список тестов"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибок"
+
+  admin:
+    nav:
+      title: "TestGuru Панель Администратора"
+      welcome: "Добро пожаловать"
+      logout: "Выход"
+    tests:
+      test:
+        confirm: "Вы уверены?"
+      create:
+        success: "Тест успешно создан"
+      new:
+        header: "Создать новый тест"
+      edit:
+        header: "Изменить '%{title}' Тест"
+      index:
+        header: "Доступные Тесты"
+        questions_count: "Кол-во вопросов"
+        actions: "Действия"
+        new_test: "Новый тест"
+      show:
+        header: "Тест"
+        questions: "Вопросы"
+        new_question: "Новый вопрос"
+        answers_count: "Количество ответов"
+        actions: "Действия"
+    questions:
+      question:
+        confirm: "Вы уверены?"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"

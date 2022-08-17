@@ -1,15 +1,14 @@
-<h1>Tests</h1>
+<h1><%= t('.header') %></h1>
 
 <table>
   <tr>
     <th>№</th>
-    <th>Title</th>
-    <th>Level</th>
-    <th>Category</th>
-    <th>Questions count</th>
-    <th>Author</th>
-    <th>Actions</th>
-  </tr>
+    <th><%= t('activerecord.attributes.test.title') %></th>
+    <th><%= t('activerecord.attributes.test.level') %></th>
+    <th><%= t('activerecord.attributes.test.category_id') %></th>
+    <th><%= t('.questions_count') %></th>
+    <th><%= t('activerecord.attributes.test.author_id') %></th>
+    <th><%= t('.actions') %></th>  </tr>
 
   <%= render @tests %>
 </table>

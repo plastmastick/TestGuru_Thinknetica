@@ -80,16 +80,13 @@ en:
       logout: "Log out"
       signup: "Sign up"
       login: "Log in"
+      admin_panel: "Admin Panel"
     errors:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
 
   admin:
-    nav:
-      title: "TestGuru Admin Panel"
-      welcome: "Welcome"
-      logout: "Log out"
     tests:
       test:
         confirm: "Are you sure?"

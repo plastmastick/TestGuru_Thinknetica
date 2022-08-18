@@ -49,6 +49,7 @@ ru:
       logout: "Выход"
       signup: "Зарегистрироваться"
       login: "Авторизироваться"
+      admin_panel: "Панель Администратора"
     errors:
       header:
         few: "Обнаружено %{count} ошибки"
@@ -57,10 +58,6 @@ ru:
         other: "Обнаружено %{count} ошибок"
 
   admin:
-    nav:
-      title: "TestGuru Панель Администратора"
-      welcome: "Добро пожаловать"
-      logout: "Выход"
     tests:
       test:
         confirm: "Вы уверены?"

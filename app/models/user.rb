@@ -23,7 +23,6 @@ class User < ApplicationRecord
                     uniqueness: true,
                     format: {
                       with: REGEXP_EMAIL,
-                      message: 'Wrong format',
                       multiline: true
                     }
 

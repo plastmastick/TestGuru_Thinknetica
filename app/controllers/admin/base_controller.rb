@@ -11,6 +11,6 @@ class Admin::BaseController < ApplicationController
     # byebug
     return if user_signed_in? && current_user.is_a?(Admin)
 
-    redirect_to root_path, alert: 'You are not authorized to view this page'
+    redirect_to root_path, alert: t('helpers.alerts.not_authorized')
   end
 end

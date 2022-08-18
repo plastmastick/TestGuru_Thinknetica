@@ -38,8 +38,14 @@ gem 'jbuilder', '~> 2.7'
 # Centralization of locale data collection for Ruby on Rails.
 gem 'rails-i18n', '~> 6.0'
 
-# Device
+# Auth - Device
 gem 'devise', '~> 4.0'
+
+# Networking
+gem 'faraday'
+
+# GitHub API: https://github.com/octokit/octokit.rb
+gem "octokit", "~> 4.0"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -53,8 +59,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 # Rubocop
 gem 'rubocop', require: false
-
-# RuboCop Rails
+# Rubocop Rails
 gem 'rubocop-rails', require: false
 
 group :development, :test do

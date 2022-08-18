@@ -4,7 +4,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <% if user_signed_in? && current_user.is_a?(Admin) %>
+        <% if current_user&.is_a?(Admin) %>
           <li class="nav-item">
             <%= link_to t('.admin_panel'), admin_tests_path, class: 'nav-link active' %>
           </li>

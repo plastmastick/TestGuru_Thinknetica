@@ -8,8 +8,7 @@ class Admin::BaseController < ApplicationController
   private
 
   def admin_required!
-    # byebug
-    return if user_signed_in? && current_user.is_a?(Admin)
+    return if current_user&.is_a?(Admin)
 
     redirect_to root_path, alert: t('helpers.alerts.not_authorized')
   end

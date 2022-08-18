@@ -1,14 +1,23 @@
-<h1><%= t('.header') %></h1>
+<div class="row justify-content-center mt-3">
 
-<table>
-  <tr>
-    <th>№</th>
-    <th><%= t('activerecord.attributes.test.title') %></th>
-    <th><%= t('activerecord.attributes.test.level') %></th>
-    <th><%= t('activerecord.attributes.test.category_id') %></th>
-    <th><%= t('.questions_count') %></th>
-    <th><%= t('activerecord.attributes.test.author_id') %></th>
-    <th><%= t('.actions') %></th>  </tr>
+  <h2 class="text-center"><%= t('.header') %></h2>
 
-  <%= render @tests %>
-</table>
+  <table class="table mt-4">
+    <thead class="table-light">
+      <tr>
+        <th scope="col">№</th>
+        <th scope="col"><%= t('activerecord.attributes.test.title') %></th>
+        <th scope="col"><%= t('activerecord.attributes.test.level') %></th>
+        <th scope="col"><%= t('activerecord.attributes.test.category_id') %></th>
+        <th scope="col"><%= t('.questions_count') %></th>
+        <th scope="col"><%= t('activerecord.attributes.test.author_id') %></th>
+        <th scope="col"><%= t('.actions') %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= render @tests %>
+    </tbody>
+  </table>
+
+</div>

@@ -33,6 +33,8 @@ en:
   hello: "Hello world"
 
   helpers:
+    alerts:
+      not_authorized: 'You are not authorized to view this page'
     buttons:
       show: "Show"
       edit: "Edit"
@@ -57,20 +59,12 @@ en:
       user:
         remember_me: "Remember me"
 
-  layouts:
-    nav:
-      title: "TestGuru"
-      welcome: "Welcome"
-      logout: "Log out"
-      signup: "Sign up"
-      login: "Log in"
-
   tests:
     test:
       start: "Start"
     index:
       header: "Available Tests"
-      questions_count: "Questions count"
+      questions_count: "Questions"
       actions: "Actions"
 
   results:
@@ -82,16 +76,19 @@ en:
       tests_list: "Test list"
 
   shared:
+    nav:
+      title: "TestGuru"
+      welcome: "Welcome"
+      logout: "Log out"
+      signup: "Sign up"
+      login: "Log in"
+      admin_panel: "Admin Panel"
     errors:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
 
   admin:
-    nav:
-      title: "TestGuru Admin Panel"
-      welcome: "Welcome"
-      logout: "Log out"
     tests:
       test:
         confirm: "Are you sure?"
@@ -103,14 +100,14 @@ en:
         header: "Edit '%{title}' Test"
       index:
         header: "Available Tests"
-        questions_count: "Questions count"
+        questions_count: "Questions"
         actions: "Actions"
         new_test: "New test"
       show:
         header: "Test"
         questions: "Questions"
         new_question: "New question"
-        answers_count: "Answers count"
+        answers_count: "Answers"
         actions: "Actions"
     questions:
       question:

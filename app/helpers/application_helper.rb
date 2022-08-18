@@ -1,15 +1,22 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
+  # Using for convert default flash types to bootstrap alerts types
+  ALERTS_TYPES = {
+    notice: :info,
+    alert: :danger
+  }.freeze
+
   def current_year
     Time.zone.now.year
   end
 
   def github_url(author, repo)
-    link_to 'Github, TestGuru',
+    link_to "#{author.capitalize} Github, '#{repo.capitalize}'",
             "https://github.com/#{author}/#{repo}",
-            target: :_blank,
-            rel: 'nofollow, noopener'
+            target: '_blank',
+            rel: 'nofollow, noopener',
+            class: "text-reset fw-bold text-decoration-none"
   end
 
   protected
@@ -19,7 +26,13 @@ module ApplicationHelper
   def render_messages(msg_type)
     messages = flash[msg_type]
     messages = [messages] if !messages.is_a?(Array) && !messages.nil?
-    messages.map { |m| content_tag :p, m.to_s, class: "flash #{msg_type}" }
-                 .join.html_safe if messages.present?
+    return if messages.blank?
+
+    messages.map do |m|
+      content_tag :p, m.to_s,
+                  class: "alert alert-#{ALERTS_TYPES[msg_type] || :danger} mt-3 text-center",
+                  role: "alert"
+    end
+            .join.html_safe
   end
 end

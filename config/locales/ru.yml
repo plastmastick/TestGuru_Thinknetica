@@ -2,6 +2,8 @@ ru:
   hello: "Привет мир"
 
   helpers:
+    alerts:
+      not_authorized: 'Вы не авторизованы для просмотра этой страницы'
     buttons:
       show: "Открыть"
       edit: "Изменить"
@@ -26,20 +28,12 @@ ru:
       user:
         remember_me: "Запомнить меня"
 
-  layouts:
-    nav:
-      title: "TestGuru"
-      welcome: "Добро пожаловать"
-      logout: "Выход"
-      signup: "Зарегистрироваться"
-      login: "Авторизироваться"
-
   tests:
     test:
       start: "Начать"
     index:
       header: "Доступные Тесты"
-      questions_count: "Кол-во вопросов"
+      questions_count: "Вопросов"
       actions: "Действия"
 
   results:
@@ -51,6 +45,13 @@ ru:
       tests_list: "Список тестов"
 
   shared:
+    nav:
+      title: "TestGuru"
+      welcome: "Добро пожаловать"
+      logout: "Выход"
+      signup: "Зарегистрироваться"
+      login: "Авторизироваться"
+      admin_panel: "Панель Администратора"
     errors:
       header:
         few: "Обнаружено %{count} ошибки"
@@ -59,10 +60,6 @@ ru:
         other: "Обнаружено %{count} ошибок"
 
   admin:
-    nav:
-      title: "TestGuru Панель Администратора"
-      welcome: "Добро пожаловать"
-      logout: "Выход"
     tests:
       test:
         confirm: "Вы уверены?"
@@ -74,14 +71,14 @@ ru:
         header: "Изменить '%{title}' Тест"
       index:
         header: "Доступные Тесты"
-        questions_count: "Кол-во вопросов"
+        questions_count: "Вопросов"
         actions: "Действия"
         new_test: "Новый тест"
       show:
         header: "Тест"
         questions: "Вопросы"
         new_question: "Новый вопрос"
-        answers_count: "Количество ответов"
+        answers_count: "Ответов"
         actions: "Действия"
     questions:
       question:

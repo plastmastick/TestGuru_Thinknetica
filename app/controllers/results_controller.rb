@@ -19,9 +19,9 @@ class ResultsController < ApplicationController
   end
 
   def gist
-    result = GistQuestionService.new(@result.current_question).call
+    gist_request_result = GistQuestionService.new(@result.current_question).call
 
-    flash_options = if result.success?
+    flash_options = if gist_request_result
                       { notice: t('.success')}
                     else
                       { alert: t('.failure')}

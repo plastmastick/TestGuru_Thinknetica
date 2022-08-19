@@ -43,6 +43,9 @@ ru:
       header: "Тест '%{title}' завершён!"
       your_score: "Ваш результат"
       tests_list: "Список тестов"
+    gist:
+      success: "Gist успешно создан"
+      failure: "Во время сохранения gist произошла ошибка"
 
   shared:
     nav:
@@ -87,3 +90,7 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+  services:
+    gist_question_service:
+      description: "Вопрос по тесту '%{title}' из TestGuru"

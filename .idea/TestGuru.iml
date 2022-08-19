@@ -54,6 +54,8 @@
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.1.10, RVM: ruby-3.0.0 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, RVM: ruby-3.0.0 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="devise (v4.8.1, RVM: ruby-3.0.0 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dotenv (v2.8.1, RVM: ruby-3.0.0 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dotenv-rails (v2.8.1, RVM: ruby-3.0.0 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.10.0, RVM: ruby-3.0.0 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.8.1, RVM: ruby-3.0.0 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faraday (v2.5.2, RVM: ruby-3.0.0 [global]) [gem]" level="application" />

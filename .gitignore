@@ -40,3 +40,6 @@ yarn-debug.log*
 .yarn-integrity
 
 /config/database.yml
+
+# Ignore ENVs
+.env

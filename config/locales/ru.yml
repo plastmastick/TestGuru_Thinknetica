@@ -44,8 +44,9 @@ ru:
       your_score: "Ваш результат"
       tests_list: "Список тестов"
     gist:
-      success: "Gist успешно создан"
+      success: "Gist успешно создан!"
       failure: "Во время сохранения gist произошла ошибка"
+      open: "Открыть"
 
   shared:
     nav:

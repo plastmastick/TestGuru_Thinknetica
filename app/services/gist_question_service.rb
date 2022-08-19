@@ -12,14 +12,18 @@ class GistQuestionService
 
   def call
     @client.create_gist(gist_params)
-    call_success?
+    self
+  end
+
+  def success?
+    @client.last_response.status == 201
+  end
+
+  def url
+    @client.last_response.data[:html_url]
   end
 
   private
-
-  def call_success?
-    @client.last_response.status == 201
-  end
 
   def gist_params
     {

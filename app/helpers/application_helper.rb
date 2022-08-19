@@ -29,7 +29,7 @@ module ApplicationHelper
     return if messages.blank?
 
     messages.map do |m|
-      content_tag :p, m.to_s,
+      content_tag :p, m.to_s.html_safe,
                   class: "alert alert-#{ALERTS_TYPES[msg_type] || :danger} mt-3 text-center",
                   role: "alert"
     end

@@ -22,10 +22,10 @@ class ResultsController < ApplicationController
     gist_request = GistQuestionService.new(@result.current_question).call
 
     flash_options = if gist_request.success?
-                      Gist.create!({ url: gist_request.url, user: current_user, question: @result.current_question })
-                      { notice: "#{t('.success')} #{view_context.link_to(t('.open'), gist_request.url,
-                                                                         target: '_blank',
-                                                                         rel: 'nofollow, noopener')}" }
+                      gist = Gist.create!({ git_id: gist_request.git_id,
+                                            user: current_user,
+                                            question: @result.current_question })
+                      { notice: "#{t('.success')}: #{view_context.url(gist)}" }
                     else
                       { alert: t('.failure') }
                     end

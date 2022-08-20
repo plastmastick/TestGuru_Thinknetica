@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2022_08_19_170843) do
   end
 
   create_table "gists", force: :cascade do |t|
-    t.string "url", null: false
+    t.string "git_id", null: false
     t.bigint "user_id", null: false
     t.bigint "question_id", null: false
     t.datetime "created_at", precision: 6, null: false

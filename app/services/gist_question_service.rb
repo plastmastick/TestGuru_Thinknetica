@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class GistQuestionService
 
   def initialize(question, client: nil)
@@ -19,8 +20,8 @@ class GistQuestionService
     @client.last_response.status == 201
   end
 
-  def url
-    @client.last_response.data[:html_url]
+  def git_id
+    @client.last_response.data[:id]
   end
 
   private

@@ -75,7 +75,7 @@ en:
       your_score: "Your score is"
       tests_list: "Test list"
     gist:
-      success: "Gist was successfully created!"
+      success: "Gist was successfully created"
       failure: "An error occurred while saving gist"
       open: " Open"
 
@@ -87,6 +87,7 @@ en:
       signup: "Sign up"
       login: "Log in"
       admin_panel: "Admin Panel"
+      gists: "Gists"
     errors:
       header:
         one: "%{count} error detected"
@@ -116,6 +117,9 @@ en:
     questions:
       question:
         confirm: "Are you sure?"
+    gists:
+      index:
+        header: "Created Gists"
 
   tests_mailer:
     completed_test:

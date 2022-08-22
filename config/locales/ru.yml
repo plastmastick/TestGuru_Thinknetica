@@ -43,10 +43,11 @@ ru:
       header: "Тест '%{title}' завершён!"
       your_score: "Ваш результат"
       tests_list: "Список тестов"
-    gist:
-      success: "Gist успешно создан"
+
+  gists:
+    create:
+      success: "Gist успешно создан: %{gist_url}"
       failure: "Во время сохранения gist произошла ошибка"
-      open: "Открыть"
 
   shared:
     nav:

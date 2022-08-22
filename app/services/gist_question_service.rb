@@ -1,27 +1,16 @@
 # frozen_string_literal: true
 
 class GistQuestionService
-
   def initialize(question, client: nil)
     @question = question
     @test = @question.test
-    # Clients:
-    # ./lib/clients/GitHubClient.rb
     # gem octokit
     @client = client || Octokit::Client.new(access_token: ENV['GITHUB_GIST_ACCESS_TOKEN'])
   end
 
-  def call
+  def create_gist
     @client.create_gist(gist_params)
-    self
-  end
-
-  def success?
-    @client.last_response.status == 201
-  end
-
-  def git_id
-    @client.last_response.data[:id]
+    Responce.new(@client.last_response)
   end
 
   private
@@ -41,5 +30,15 @@ class GistQuestionService
     content = [@question.body]
     content += @question.answers.pluck(:body)
     content.join("\n")
+  end
+
+  Responce = Struct.new(:info) do
+    def success?
+      info.status == 201
+    end
+
+    def git_id
+      info.data[:id]
+    end
   end
 end

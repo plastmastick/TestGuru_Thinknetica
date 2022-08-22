@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "test_helper"
 
 class GistsControllerTest < ActionDispatch::IntegrationTest
@@ -17,7 +19,7 @@ class GistsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create gist" do
     assert_difference('Gist.count') do
-      post gists_url, params: { gist: {  } }
+      post gists_url, params: { gist: {} }
     end
 
     assert_redirected_to gist_url(Gist.last)
@@ -34,7 +36,7 @@ class GistsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update gist" do
-    patch gist_url(@gist), params: { gist: {  } }
+    patch gist_url(@gist), params: { gist: {} }
     assert_redirected_to gist_url(@gist)
   end
 

@@ -16,7 +16,7 @@
   <% end %>
 
   <p>
-    <%= link_to 'Gist Question', gist_result_path(@result), method: :post %>
+    <%= link_to 'Gist Question', result_gists_path(@result), method: :post %>
   </p>
   <p>
     <%= form.submit t('helpers.buttons.next') %>

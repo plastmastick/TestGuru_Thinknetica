@@ -67,6 +67,11 @@ en:
       questions_count: "Questions"
       actions: "Actions"
 
+  gists:
+    create:
+      success: "Gist was successfully created: %{gist_url}"
+      failure: "An error occurred while saving gist"
+
   results:
     test_passage:
       header: "Pass the '<%= @result.test.title %>' Tests"
@@ -74,10 +79,6 @@ en:
       header: "The '%{title}' Test was completed!"
       your_score: "Your score is"
       tests_list: "Test list"
-    gist:
-      success: "Gist was successfully created"
-      failure: "An error occurred while saving gist"
-      open: " Open"
 
   shared:
     nav:

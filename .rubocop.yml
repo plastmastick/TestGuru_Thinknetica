@@ -37,3 +37,6 @@ Metrics/BlockLength:
   Exclude:
     - 'config/routes.rb'
     - 'config/environments/*'
+
+Lint/RedundantSafeNavigation:
+  Enabled: false

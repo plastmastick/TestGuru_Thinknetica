@@ -3,9 +3,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# ENVs
-gem 'dotenv-rails', groups: %i[development test]
-
 ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
@@ -44,9 +41,6 @@ gem 'rails-i18n', '~> 6.0'
 # Auth - Device
 gem 'devise', '~> 4.0'
 
-# Networking
-gem 'faraday'
-
 # GitHub API: https://github.com/octokit/octokit.rb
 gem "octokit", "~> 4.0"
 
@@ -68,6 +62,8 @@ gem 'rubocop-rails', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  # ENVs
+  gem 'dotenv-rails'
 end
 
 group :development do

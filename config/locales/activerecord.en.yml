@@ -2,6 +2,10 @@ en:
   activerecord:
     models:
       test: "Test"
+      category: "Category"
+      question: "Question"
+      answer: "Answer"
+      user: "User"
 
     attributes:
       test:
@@ -17,6 +21,8 @@ en:
         last_name: "Last name"
         password: "Password"
         password_confirmation: "Password confirmation"
+      gist:
+        url: "Gist URL"
 
     errors:
       messages:

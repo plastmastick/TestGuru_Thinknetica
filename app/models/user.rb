@@ -11,6 +11,7 @@ class User < ApplicationRecord
          :confirmable
 
   has_many :results, dependent: :destroy
+  has_many :gists, dependent: :destroy
   has_many :tests, through: :results
   has_many :author_tests, class_name: "Test", foreign_key: :author_id,
                           dependent: :nullify, inverse_of: :author

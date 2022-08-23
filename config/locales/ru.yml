@@ -44,6 +44,11 @@ ru:
       your_score: "Ваш результат"
       tests_list: "Список тестов"
 
+  gists:
+    create:
+      success: "Gist успешно создан: %{gist_url}"
+      failure: "Во время сохранения gist произошла ошибка"
+
   shared:
     nav:
       title: "TestGuru"
@@ -52,6 +57,7 @@ ru:
       signup: "Зарегистрироваться"
       login: "Авторизироваться"
       admin_panel: "Панель Администратора"
+      gists: "Gists"
     errors:
       header:
         few: "Обнаружено %{count} ошибки"
@@ -83,7 +89,14 @@ ru:
     questions:
       question:
         confirm: "Вы уверены?"
+    gists:
+      index:
+        header: "Созданные Gist"
 
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+  services:
+    gist_question_service:
+      description: "Вопрос по тесту '%{title}' из TestGuru"

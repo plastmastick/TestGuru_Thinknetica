@@ -14,12 +14,12 @@ users = User.create!(
   ]
 )
 
-admin = Admin.create! (
+admin = Admin.create!(
                         { first_name: 'Admin', last_name: 'Test',
                           password: 'secret', password_confirmation: 'secret',
                           email: 'teacher@test.ru',
                           type: 'Admin' }
-                      )
+)
 
 categories = Category.create!(
   [

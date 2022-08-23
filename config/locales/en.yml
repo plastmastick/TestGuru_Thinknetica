@@ -67,6 +67,11 @@ en:
       questions_count: "Questions"
       actions: "Actions"
 
+  gists:
+    create:
+      success: "Gist was successfully created: %{gist_url}"
+      failure: "An error occurred while saving gist"
+
   results:
     test_passage:
       header: "Pass the '<%= @result.test.title %>' Tests"
@@ -83,6 +88,7 @@ en:
       signup: "Sign up"
       login: "Log in"
       admin_panel: "Admin Panel"
+      gists: "Gists"
     errors:
       header:
         one: "%{count} error detected"
@@ -112,7 +118,14 @@ en:
     questions:
       question:
         confirm: "Are you sure?"
+    gists:
+      index:
+        header: "Created Gists"
 
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
+
+  services:
+    gist_question_service:
+      description: "A question about %{title} from TestGuru"

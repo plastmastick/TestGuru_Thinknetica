@@ -1,0 +1,8 @@
+<tr>
+  <td><%= @gists.index(gist) + 1 %></td>
+  <td >
+    <%= link_to gist.question.body[0..25] + '..', admin_question_path(gist.question), class: "text-decoration-none" %>
+  </td>
+  <td><%= url(gist) %></td>
+  <td><%= gist.user.full_name %></td>
+</tr>

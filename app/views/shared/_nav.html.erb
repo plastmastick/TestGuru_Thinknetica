@@ -1,16 +1,26 @@
+<!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
+    <!-- Brand-->
     <%= link_to t('.title'), root_path, class: 'navbar-brand mb-0 h1' %>
+    <!-- Brand-->
 
+    <!--Menu-->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!--Admin Menu-->
         <% if current_user&.is_a?(Admin) %>
           <li class="nav-item">
             <%= link_to t('.admin_panel'), admin_tests_path, class: 'nav-link active' %>
           </li>
+          <li class="nav-item">
+            <%= link_to t('.gists'), admin_gists_path, class: 'nav-link active' %>
+          </li>
         <% end %>
+        <!--Admin Menu-->
       </ul>
     </div>
+    <!--Menu-->
 
     <span class="navbar-text">
       <% if user_signed_in? %>
@@ -24,3 +34,4 @@
     </span>
   </div>
 </nav>
+<!--Navbar-->

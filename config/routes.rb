@@ -23,9 +23,11 @@ Rails.application.routes.draw do
     member do
       get :test_passage
     end
+    resources :gists, only: :create
   end
 
   namespace :admin do
+    resources :gists, only: :index
     resources :tests do
       resources :questions, shallow: true, except: :index do
         resources :answers, shallow: true, except: :index

@@ -6,7 +6,11 @@
     <thead class="table-light">
       <tr>
         <th scope="col">№</th>
-        <th scope="col"><%= t('activerecord.attributes.test.title') %></th>
+        <th class="sort-by-title pointer">
+          <%= t('activerecord.attributes.test.title') %>
+          <%= octicon 'arrow-up', class: 'text-success hide' %>
+          <%= octicon 'arrow-down', class: 'text-success' %>
+        </th>
         <th scope="col"><%= t('activerecord.attributes.test.level') %></th>
         <th scope="col"><%= t('activerecord.attributes.test.category_id') %></th>
         <th scope="col"><%= t('.questions_count') %></th>

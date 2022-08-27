@@ -48,8 +48,8 @@ gem "octokit", "~> 4.0"
 # gem 'image_processing', '~> 1.2'
 
 # UI
-gem 'jquery-rails'
 gem 'bootstrap', '~>5.2.0'
+gem 'jquery-rails'
 gem 'octicons_helper'
 
 # Reduces boot times through caching; required in config/boot.rb

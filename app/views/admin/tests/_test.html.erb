@@ -1,6 +1,6 @@
 <tr>
-  <td><%= @tests.index(test) + 1 %></td>
-  <td><%= test.title %></td>
+  <td id="row-number"><%= @tests.index(test) + 1 %></td>
+  <td id="title"><%= test.title %></td>
   <td><%= test_level(test) %></td>
   <td><%= test.category.title %></td>
   <td><%= test.questions.count %></td>

@@ -322,7 +322,7 @@
           "one",
           "other"
         ],
-        "rule": "#<Proc:0x00005608da80f460 /home/plastmastick/.rvm/gems/ruby-3.0.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/one_other.rb:7 (lambda)>"
+        "rule": "#<Proc:0x000055e074a4f9c0 /home/plastmastick/.rvm/gems/ruby-3.0.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/one_other.rb:7 (lambda)>"
       }
     },
     "number": {
@@ -746,7 +746,7 @@
       },
       "buttons": {
         "back": "Назад",
-        "cancel": "Отменить!!!!!!!!!!!!1",
+        "cancel": "Отменить",
         "delete": "Удалить",
         "edit": "Изменить",
         "next": "Далее",
@@ -790,10 +790,10 @@
           "many",
           "other"
         ],
-        "rule": "#<Proc:0x00005608da98aa60 /home/plastmastick/.rvm/gems/ruby-3.0.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/east_slavic.rb:16 (lambda)>"
+        "rule": "#<Proc:0x000055e074bc2d98 /home/plastmastick/.rvm/gems/ruby-3.0.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/east_slavic.rb:16 (lambda)>"
       },
       "transliterate": {
-        "rule": "#<Proc:0x00005608da9188e8 /home/plastmastick/.rvm/gems/ruby-3.0.0/gems/rails-i18n-6.0.0/lib/rails_i18n/../../rails/transliteration/ru.rb:11 (lambda)>"
+        "rule": "#<Proc:0x000055e074b54be0 /home/plastmastick/.rvm/gems/ruby-3.0.0/gems/rails-i18n-6.0.0/lib/rails_i18n/../../rails/transliteration/ru.rb:11 (lambda)>"
       }
     },
     "number": {

@@ -36,6 +36,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Centralization of locale data collection for Ruby on Rails.
+gem "i18n-js"
 gem 'rails-i18n', '~> 6.0'
 
 # Auth - Device

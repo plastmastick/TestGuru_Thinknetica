@@ -1,0 +1,957 @@
+{
+  "en": {
+    "admin": {
+      "gists": {
+        "index": {
+          "header": "Created Gists"
+        }
+      },
+      "questions": {
+        "question": {
+          "confirm": "Are you sure?"
+        }
+      },
+      "tests": {
+        "create": {
+          "success": "Test was successfully created"
+        },
+        "edit": {
+          "header": "Edit '%{title}' Test"
+        },
+        "form_inline": {
+          "submit": "OK"
+        },
+        "index": {
+          "actions": "Actions",
+          "header": "Available Tests",
+          "new_test": "New test",
+          "questions_count": "Questions"
+        },
+        "new": {
+          "header": "Create new test"
+        },
+        "show": {
+          "actions": "Actions",
+          "answers_count": "Answers",
+          "header": "Test",
+          "new_question": "New question",
+          "questions": "Questions"
+        },
+        "test": {
+          "confirm": "Are you sure?"
+        }
+      }
+    },
+    "date": {
+      "abbr_day_names": [
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "abbr_month_names": [
+        null,
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ],
+      "day_names": [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "formats": {
+        "default": "%Y-%m-%d",
+        "long": "%B %d, %Y",
+        "short": "%b %d"
+      },
+      "month_names": [
+        null,
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ],
+      "order": [
+        "year",
+        "month",
+        "day"
+      ]
+    },
+    "datetime": {
+      "distance_in_words": {
+        "about_x_hours": {
+          "one": "about 1 hour",
+          "other": "about %{count} hours"
+        },
+        "about_x_months": {
+          "one": "about 1 month",
+          "other": "about %{count} months"
+        },
+        "about_x_years": {
+          "one": "about 1 year",
+          "other": "about %{count} years"
+        },
+        "almost_x_years": {
+          "one": "almost 1 year",
+          "other": "almost %{count} years"
+        },
+        "half_a_minute": "half a minute",
+        "less_than_x_minutes": {
+          "one": "less than a minute",
+          "other": "less than %{count} minutes"
+        },
+        "less_than_x_seconds": {
+          "one": "less than 1 second",
+          "other": "less than %{count} seconds"
+        },
+        "over_x_years": {
+          "one": "over 1 year",
+          "other": "over %{count} years"
+        },
+        "x_days": {
+          "one": "1 day",
+          "other": "%{count} days"
+        },
+        "x_minutes": {
+          "one": "1 minute",
+          "other": "%{count} minutes"
+        },
+        "x_months": {
+          "one": "1 month",
+          "other": "%{count} months"
+        },
+        "x_seconds": {
+          "one": "1 second",
+          "other": "%{count} seconds"
+        },
+        "x_years": {
+          "one": "1 year",
+          "other": "%{count} years"
+        }
+      },
+      "prompts": {
+        "day": "Day",
+        "hour": "Hour",
+        "minute": "Minute",
+        "month": "Month",
+        "second": "Second",
+        "year": "Year"
+      }
+    },
+    "devise": {
+      "confirmations": {
+        "confirmed": "Your email address has been successfully confirmed.",
+        "new": {
+          "header": "Resend confirmation instructions",
+          "resend_confirmation_instructions": "Resend confirmation instructions"
+        },
+        "send_instructions": "You will receive an email with instructions for how to confirm your email address in a few minutes.",
+        "send_paranoid_instructions": "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
+      },
+      "failure": {
+        "already_authenticated": "You are already signed in.",
+        "inactive": "Your account is not activated yet.",
+        "invalid": "Invalid %{authentication_keys} or password.",
+        "last_attempt": "You have one more attempt before your account is locked.",
+        "locked": "Your account is locked.",
+        "not_found_in_database": "Invalid %{authentication_keys} or password.",
+        "timeout": "Your session expired. Please sign in again to continue.",
+        "unauthenticated": "You need to sign in or sign up before continuing.",
+        "unconfirmed": "You have to confirm your email address before continuing."
+      },
+      "mailer": {
+        "confirmation_instructions": {
+          "subject": "Confirmation instructions"
+        },
+        "email_changed": {
+          "subject": "Email Changed"
+        },
+        "password_change": {
+          "subject": "Password Changed"
+        },
+        "reset_password_instructions": {
+          "subject": "Reset password instructions"
+        },
+        "unlock_instructions": {
+          "subject": "Unlock instructions"
+        }
+      },
+      "omniauth_callbacks": {
+        "failure": "Could not authenticate you from %{kind} because \"%{reason}\".",
+        "success": "Successfully authenticated from %{kind} account."
+      },
+      "passwords": {
+        "new": {
+          "header": "Forgot your password?",
+          "submit_password_reset": "Send me reset password instructions"
+        },
+        "no_token": "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided.",
+        "send_instructions": "You will receive an email with instructions on how to reset your password in a few minutes.",
+        "send_paranoid_instructions": "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes.",
+        "updated": "Your password has been changed successfully. You are now signed in.",
+        "updated_not_active": "Your password has been changed successfully."
+      },
+      "registrations": {
+        "destroyed": "Bye! Your account has been successfully cancelled. We hope to see you again soon.",
+        "new": {
+          "characters_minimum": "%{min_password_length} characters minimum",
+          "header": "Become a Guru",
+          "signup": "Sign up"
+        },
+        "signed_up": "Welcome! You have signed up successfully.",
+        "signed_up_but_inactive": "You have signed up successfully. However, we could not sign you in because your account is not yet activated.",
+        "signed_up_but_locked": "You have signed up successfully. However, we could not sign you in because your account is locked.",
+        "signed_up_but_unconfirmed": "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account.",
+        "update_needs_confirmation": "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirmation link to confirm your new email address.",
+        "updated": "Your account has been updated successfully.",
+        "updated_but_not_signed_in": "Your account has been updated successfully, but since your password was changed, you need to sign in again."
+      },
+      "sessions": {
+        "already_signed_out": "Signed out successfully.",
+        "new": {
+          "header": "Guru Gates",
+          "login": "Log in"
+        },
+        "signed_in": "Signed in successfully.",
+        "signed_out": "Signed out successfully."
+      },
+      "shared": {
+        "links": {
+          "forgot_password": "Forgot your password?",
+          "receive_confirmation_instructions": "Didn't receive confirmation instructions?",
+          "receive_unlock_instructions": "Didn't receive unlock instructions?"
+        }
+      },
+      "unlocks": {
+        "send_instructions": "You will receive an email with instructions for how to unlock your account in a few minutes.",
+        "send_paranoid_instructions": "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes.",
+        "unlocked": "Your account has been unlocked successfully. Please sign in to continue."
+      }
+    },
+    "flash": {
+      "actions": {
+        "create": {
+          "notice": "%{resource_name} was successfully created."
+        },
+        "destroy": {
+          "alert": "%{resource_name} could not be destroyed.",
+          "notice": "%{resource_name} was successfully destroyed."
+        },
+        "update": {
+          "notice": "%{resource_name} was successfully updated."
+        }
+      }
+    },
+    "gists": {
+      "create": {
+        "failure": "An error occurred while saving gist",
+        "success": "Gist was successfully created: %{gist_url}"
+      }
+    },
+    "hello": "Hello world",
+    "helpers": {
+      "alerts": {
+        "not_authorized": "You are not authorized to view this page"
+      },
+      "buttons": {
+        "back": "Back",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "edit": "Edit",
+        "next": "Next",
+        "show": "Show"
+      },
+      "label": {
+        "user": {
+          "remember_me": "Remember me"
+        }
+      },
+      "results": {
+        "result_info": {
+          "test_failed": "Test failed.",
+          "test_passed": "Test passed."
+        }
+      },
+      "select": {
+        "prompt": "Please select"
+      },
+      "submit": {
+        "create": "Create %{model}",
+        "submit": "Save %{model}",
+        "update": "Update %{model}"
+      },
+      "tests": {
+        "levels": {
+          "advanced": "Advanced",
+          "easy": "Easy",
+          "elementary": "Elementary",
+          "epic": "Epic",
+          "hard": "Hard"
+        },
+        "unknown": "Unknown"
+      }
+    },
+    "i18n": {
+      "plural": {
+        "keys": [
+          "one",
+          "other"
+        ],
+        "rule": "#<Proc:0x00005608da80f460 /home/plastmastick/.rvm/gems/ruby-3.0.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/one_other.rb:7 (lambda)>"
+      }
+    },
+    "number": {
+      "currency": {
+        "format": {
+          "delimiter": ",",
+          "format": "%u%n",
+          "precision": 2,
+          "separator": ".",
+          "significant": false,
+          "strip_insignificant_zeros": false,
+          "unit": "$"
+        }
+      },
+      "format": {
+        "delimiter": ",",
+        "precision": 3,
+        "round_mode": "default",
+        "separator": ".",
+        "significant": false,
+        "strip_insignificant_zeros": false
+      },
+      "human": {
+        "decimal_units": {
+          "format": "%n %u",
+          "units": {
+            "billion": "Billion",
+            "million": "Million",
+            "quadrillion": "Quadrillion",
+            "thousand": "Thousand",
+            "trillion": "Trillion",
+            "unit": ""
+          }
+        },
+        "format": {
+          "delimiter": "",
+          "precision": 3,
+          "significant": true,
+          "strip_insignificant_zeros": true
+        },
+        "storage_units": {
+          "format": "%n %u",
+          "units": {
+            "byte": {
+              "one": "Byte",
+              "other": "Bytes"
+            },
+            "eb": "EB",
+            "gb": "GB",
+            "kb": "KB",
+            "mb": "MB",
+            "pb": "PB",
+            "tb": "TB"
+          }
+        }
+      },
+      "percentage": {
+        "format": {
+          "delimiter": "",
+          "format": "%n%"
+        }
+      },
+      "precision": {
+        "format": {
+          "delimiter": ""
+        }
+      }
+    },
+    "results": {
+      "show": {
+        "header": "The '%{title}' Test was completed!",
+        "tests_list": "Test list",
+        "your_score": "Your score is"
+      },
+      "test_passage": {
+        "header": "Pass the '<%= @result.test.title %>' Tests"
+      }
+    },
+    "services": {
+      "gist_question_service": {
+        "description": "A question about %{title} from TestGuru"
+      }
+    },
+    "shared": {
+      "errors": {
+        "header": {
+          "one": "%{count} error detected",
+          "other": "%{count} errors detected"
+        }
+      },
+      "nav": {
+        "admin_panel": "Admin Panel",
+        "gists": "Gists",
+        "login": "Log in",
+        "logout": "Log out",
+        "signup": "Sign up",
+        "title": "TestGuru",
+        "welcome": "Welcome"
+      }
+    },
+    "support": {
+      "array": {
+        "last_word_connector": ", and ",
+        "two_words_connector": " and ",
+        "words_connector": ", "
+      }
+    },
+    "tests": {
+      "index": {
+        "actions": "Actions",
+        "header": "Available Tests",
+        "questions_count": "Questions"
+      },
+      "test": {
+        "start": "Start"
+      }
+    },
+    "tests_mailer": {
+      "completed_test": {
+        "subject": "You just completed the TestGuru test!"
+      }
+    },
+    "time": {
+      "am": "am",
+      "formats": {
+        "default": "%a, %d %b %Y %H:%M:%S %z",
+        "long": "%B %d, %Y %H:%M",
+        "short": "%d %b %H:%M"
+      },
+      "pm": "pm"
+    }
+  },
+  "ru": {
+    "admin": {
+      "gists": {
+        "index": {
+          "header": "Созданные Gist"
+        }
+      },
+      "questions": {
+        "question": {
+          "confirm": "Вы уверены?"
+        }
+      },
+      "tests": {
+        "create": {
+          "success": "Тест успешно создан"
+        },
+        "edit": {
+          "header": "Изменить '%{title}' Тест"
+        },
+        "form_inline": {
+          "submit": "ОК"
+        },
+        "index": {
+          "actions": "Действия",
+          "header": "Доступные Тесты",
+          "new_test": "Новый тест",
+          "questions_count": "Вопросов"
+        },
+        "new": {
+          "header": "Создать новый тест"
+        },
+        "show": {
+          "actions": "Действия",
+          "answers_count": "Ответов",
+          "header": "Тест",
+          "new_question": "Новый вопрос",
+          "questions": "Вопросы"
+        },
+        "test": {
+          "confirm": "Вы уверены?"
+        }
+      }
+    },
+    "date": {
+      "abbr_day_names": [
+        "Вс",
+        "Пн",
+        "Вт",
+        "Ср",
+        "Чт",
+        "Пт",
+        "Сб"
+      ],
+      "abbr_month_names": [
+        null,
+        "янв.",
+        "февр.",
+        "марта",
+        "апр.",
+        "мая",
+        "июня",
+        "июля",
+        "авг.",
+        "сент.",
+        "окт.",
+        "нояб.",
+        "дек."
+      ],
+      "day_names": [
+        "воскресенье",
+        "понедельник",
+        "вторник",
+        "среда",
+        "четверг",
+        "пятница",
+        "суббота"
+      ],
+      "formats": {
+        "default": "%d.%m.%Y",
+        "long": "%-d %B %Y",
+        "short": "%-d %b"
+      },
+      "month_names": [
+        null,
+        "января",
+        "февраля",
+        "марта",
+        "апреля",
+        "мая",
+        "июня",
+        "июля",
+        "августа",
+        "сентября",
+        "октября",
+        "ноября",
+        "декабря"
+      ],
+      "order": [
+        "day",
+        "month",
+        "year"
+      ]
+    },
+    "datetime": {
+      "distance_in_words": {
+        "about_x_hours": {
+          "few": "около %{count} часов",
+          "many": "около %{count} часов",
+          "one": "около %{count} часа",
+          "other": "около %{count} часа"
+        },
+        "about_x_months": {
+          "few": "около %{count} месяцев",
+          "many": "около %{count} месяцев",
+          "one": "около %{count} месяца",
+          "other": "около %{count} месяца"
+        },
+        "about_x_years": {
+          "few": "около %{count} лет",
+          "many": "около %{count} лет",
+          "one": "около %{count} года",
+          "other": "около %{count} лет"
+        },
+        "almost_x_years": {
+          "few": "почти %{count} года",
+          "many": "почти %{count} лет",
+          "one": "почти 1 год",
+          "other": "почти %{count} лет"
+        },
+        "half_a_minute": "полминуты",
+        "less_than_x_minutes": {
+          "few": "меньше %{count} минут",
+          "many": "меньше %{count} минут",
+          "one": "меньше %{count} минуты",
+          "other": "меньше %{count} минуты"
+        },
+        "less_than_x_seconds": {
+          "few": "меньше %{count} секунд",
+          "many": "меньше %{count} секунд",
+          "one": "меньше %{count} секунды",
+          "other": "меньше %{count} секунды"
+        },
+        "over_x_years": {
+          "few": "больше %{count} лет",
+          "many": "больше %{count} лет",
+          "one": "больше %{count} года",
+          "other": "больше %{count} лет"
+        },
+        "x_days": {
+          "few": "%{count} дня",
+          "many": "%{count} дней",
+          "one": "%{count} день",
+          "other": "%{count} дня"
+        },
+        "x_minutes": {
+          "few": "%{count} минуты",
+          "many": "%{count} минут",
+          "one": "%{count} минуту",
+          "other": "%{count} минуты"
+        },
+        "x_months": {
+          "few": "%{count} месяца",
+          "many": "%{count} месяцев",
+          "one": "%{count} месяц",
+          "other": "%{count} месяца"
+        },
+        "x_seconds": {
+          "few": "%{count} секунды",
+          "many": "%{count} секунд",
+          "one": "%{count} секунду",
+          "other": "%{count} секунды"
+        },
+        "x_years": {
+          "few": "%{count} года",
+          "many": "%{count} лет",
+          "one": "%{count} год",
+          "other": "%{count} года"
+        }
+      },
+      "prompts": {
+        "day": "День",
+        "hour": "Часов",
+        "minute": "Минут",
+        "month": "Месяц",
+        "second": "Секунд",
+        "year": "Год"
+      }
+    },
+    "devise": {
+      "confirmations": {
+        "confirmed": "Ваша учётная запись успешно подтверждена.",
+        "new": {
+          "header": "Повторно отправить инструкции по подтверждению",
+          "resend_confirmation_instructions": "Переотравить инструкцию по подтверждению"
+        },
+        "send_instructions": "В течение нескольких минут вы получите письмо с инструкциями по подтверждению вашей учётной записи.",
+        "send_paranoid_instructions": "Если ваш адрес email есть в нашей базе данных, то в течение нескольких минут вы получите письмо с инструкциями по подтверждению вашей учётной записи."
+      },
+      "failure": {
+        "already_authenticated": "Вы уже вошли в систему.",
+        "inactive": "Ваша учётная запись ещё не активирована.",
+        "invalid": "Неверный %{authentication_keys} или пароль.",
+        "last_attempt": "У Вас осталась еще одна попытка ввести пароль до блокировки.",
+        "locked": "Ваша учётная запись заблокирована.",
+        "not_found_in_database": "Неверный %{authentication_keys} или пароль.",
+        "timeout": "Ваш сеанс закончился. Пожалуйста, войдите в систему снова.",
+        "unauthenticated": "Вам необходимо войти в систему или зарегистрироваться.",
+        "unconfirmed": "Вы должны подтвердить вашу учётную запись."
+      },
+      "mailer": {
+        "confirmation_instructions": {
+          "subject": "Инструкции по подтверждению учётной записи."
+        },
+        "email_changed": {
+          "subject": "Еmail адрес был изменён."
+        },
+        "password_change": {
+          "subject": "Пароль был изменён."
+        },
+        "reset_password_instructions": {
+          "subject": "Инструкции по восстановлению пароля."
+        },
+        "unlock_instructions": {
+          "subject": "Инструкции по разблокировке учётной записи."
+        }
+      },
+      "omniauth_callbacks": {
+        "failure": "Вы не можете войти в систему с учётной записью из %{kind}, так как \"%{reason}\".",
+        "success": "Вход в систему выполнен с учётной записью из %{kind}."
+      },
+      "passwords": {
+        "new": {
+          "header": "Забыли пароль?",
+          "submit_password_reset": "Отправить мне инструкцию по сбросу пароля"
+        },
+        "no_token": "Эта страница доступна только при переходе с email для сброса пароля. Если Вы перешли по ссылке из письма, пожалуйста, убедитесь, что вы использовали полный URL.",
+        "send_instructions": "В течение нескольких минут вы получите письмо с инструкциями по восстановлению вашего пароля.",
+        "send_paranoid_instructions": "Если ваш адрес email есть в нашей базе данных, то в течение нескольких минут Вы получите письмо с инструкциями по восстановлению вашего пароля.",
+        "updated": "Ваш пароль успешно изменён. Теперь вы вошли в систему.",
+        "updated_not_active": "Пароль успешно изменён."
+      },
+      "registrations": {
+        "destroyed": "До свидания! Ваша учётная запись успешно удалена. Надеемся снова увидеть вас.",
+        "new": {
+          "characters_minimum": "Минимум %{min_password_length} символов",
+          "header": "Стань Гуру",
+          "signup": "Зарегистрироваться"
+        },
+        "signed_up": "Добро пожаловать! Вы успешно зарегистрировались.",
+        "signed_up_but_inactive": "Вы успешно зарегистрировались. Тем не менее, вы не можете войти, потому что ваша учетная запись ещё не активирована.",
+        "signed_up_but_locked": "Вы успешно зарегистрировались. Тем не менее, вы не можете войти, потому что ваша учетная запись заблокирована.",
+        "signed_up_but_unconfirmed": "В течение нескольких минут вы получите письмо с инструкциями по подтверждению вашей учётной записи.",
+        "update_needs_confirmation": "Ваш аккаунт успешно обновлен, но необходимо подтвердить Ваш новый адрес email. Пожалуйста, проверьте свою электронную почту и нажмите на ссылку \"Подтвердить\", чтобы завершить обновления email.",
+        "updated": "Ваша учётная запись успешно изменена.",
+        "updated_but_not_signed_in": "Ваш аккаунт успешно изменен, но так как ваш пароль изменился, нужно войти снова."
+      },
+      "sessions": {
+        "already_signed_out": "Выход из системы выполнен.",
+        "new": {
+          "header": "Врата Гуру",
+          "login": "Авторизироваться"
+        },
+        "signed_in": "Вход в систему выполнен.",
+        "signed_out": "Выход из системы выполнен."
+      },
+      "shared": {
+        "links": {
+          "forgot_password": "Забыли ваш пароль?",
+          "receive_confirmation_instructions": "Не получили инструкции для подтверждения?",
+          "receive_unlock_instructions": "Не получили инструкции по разблокировке?"
+        }
+      },
+      "unlocks": {
+        "send_instructions": "В течение нескольких минут вы получите письмо с инструкциями по разблокировке вашей учётной записи.",
+        "send_paranoid_instructions": "Если ваша учётная запись существует, то в течение нескольких минут вы получите письмо с инструкциями по её разблокировке.",
+        "unlocked": "Ваша учётная запись разблокирована. Теперь вы вошли в систему."
+      }
+    },
+    "gists": {
+      "create": {
+        "failure": "Во время сохранения gist произошла ошибка",
+        "success": "Gist успешно создан: %{gist_url}"
+      }
+    },
+    "hello": "Привет мир",
+    "helpers": {
+      "alerts": {
+        "not_authorized": "Вы не авторизованы для просмотра этой страницы"
+      },
+      "buttons": {
+        "back": "Назад",
+        "cancel": "Отменить!!!!!!!!!!!!1",
+        "delete": "Удалить",
+        "edit": "Изменить",
+        "next": "Далее",
+        "show": "Открыть"
+      },
+      "label": {
+        "user": {
+          "remember_me": "Запомнить меня"
+        }
+      },
+      "results": {
+        "result_info": {
+          "test_failed": "Тест провален.",
+          "test_passed": "Тест пройден."
+        }
+      },
+      "select": {
+        "prompt": "Пожалуйста, выберите"
+      },
+      "submit": {
+        "create": "Создать %{model}",
+        "submit": "Сохранить %{model}",
+        "update": "Сохранить %{model}"
+      },
+      "tests": {
+        "levels": {
+          "advanced": "Продвинутый",
+          "easy": "Лёгкий",
+          "elementary": "Начальный",
+          "epic": "Эпический",
+          "hard": "Сложный"
+        },
+        "unknown": "Неизвестно"
+      }
+    },
+    "i18n": {
+      "plural": {
+        "keys": [
+          "one",
+          "few",
+          "many",
+          "other"
+        ],
+        "rule": "#<Proc:0x00005608da98aa60 /home/plastmastick/.rvm/gems/ruby-3.0.0/gems/rails-i18n-6.0.0/lib/rails_i18n/common_pluralizations/east_slavic.rb:16 (lambda)>"
+      },
+      "transliterate": {
+        "rule": "#<Proc:0x00005608da9188e8 /home/plastmastick/.rvm/gems/ruby-3.0.0/gems/rails-i18n-6.0.0/lib/rails_i18n/../../rails/transliteration/ru.rb:11 (lambda)>"
+      }
+    },
+    "number": {
+      "currency": {
+        "format": {
+          "delimiter": " ",
+          "format": "%n %u",
+          "precision": 2,
+          "separator": ",",
+          "significant": false,
+          "strip_insignificant_zeros": false,
+          "unit": "руб."
+        }
+      },
+      "format": {
+        "delimiter": " ",
+        "precision": 3,
+        "separator": ",",
+        "significant": false,
+        "strip_insignificant_zeros": false
+      },
+      "human": {
+        "decimal_units": {
+          "format": "%n %u",
+          "units": {
+            "billion": {
+              "few": "миллиардов",
+              "many": "миллиардов",
+              "one": "миллиард",
+              "other": "миллиардов"
+            },
+            "million": {
+              "few": "миллионов",
+              "many": "миллионов",
+              "one": "миллион",
+              "other": "миллионов"
+            },
+            "quadrillion": {
+              "few": "квадриллионов",
+              "many": "квадриллионов",
+              "one": "квадриллион",
+              "other": "квадриллионов"
+            },
+            "thousand": {
+              "few": "тысяч",
+              "many": "тысяч",
+              "one": "тысяча",
+              "other": "тысяч"
+            },
+            "trillion": {
+              "few": "триллионов",
+              "many": "триллионов",
+              "one": "триллион",
+              "other": "триллионов"
+            },
+            "unit": ""
+          }
+        },
+        "format": {
+          "delimiter": "",
+          "precision": 1,
+          "significant": false,
+          "strip_insignificant_zeros": false
+        },
+        "storage_units": {
+          "format": "%n %u",
+          "units": {
+            "byte": {
+              "few": "байта",
+              "many": "байт",
+              "one": "байт",
+              "other": "байта"
+            },
+            "eb": "ЭБ",
+            "gb": "ГБ",
+            "kb": "КБ",
+            "mb": "МБ",
+            "pb": "ПБ",
+            "tb": "ТБ"
+          }
+        }
+      },
+      "percentage": {
+        "format": {
+          "delimiter": "",
+          "format": "%n%"
+        }
+      },
+      "precision": {
+        "format": {
+          "delimiter": ""
+        }
+      }
+    },
+    "results": {
+      "show": {
+        "header": "Тест '%{title}' завершён!",
+        "tests_list": "Список тестов",
+        "your_score": "Ваш результат"
+      },
+      "test_passage": {
+        "header": "Прохождения теста '%{title}'"
+      }
+    },
+    "services": {
+      "gist_question_service": {
+        "description": "Вопрос по тесту '%{title}' из TestGuru"
+      }
+    },
+    "shared": {
+      "errors": {
+        "header": {
+          "few": "Обнаружено %{count} ошибки",
+          "many": "Обнаружено %{count} ошибок",
+          "one": "Обнаружена %{count} ошибка",
+          "other": "Обнаружено %{count} ошибок"
+        }
+      },
+      "nav": {
+        "admin_panel": "Панель Администратора",
+        "gists": "Gists",
+        "login": "Авторизироваться",
+        "logout": "Выход",
+        "signup": "Зарегистрироваться",
+        "title": "TestGuru",
+        "welcome": "Добро пожаловать"
+      }
+    },
+    "support": {
+      "array": {
+        "last_word_connector": " и ",
+        "two_words_connector": " и ",
+        "words_connector": ", "
+      }
+    },
+    "tests": {
+      "index": {
+        "actions": "Действия",
+        "header": "Доступные Тесты",
+        "questions_count": "Вопросов"
+      },
+      "test": {
+        "start": "Начать"
+      }
+    },
+    "tests_mailer": {
+      "completed_test": {
+        "subject": "Вы успешно завершили тест на TestGuru!"
+      }
+    },
+    "time": {
+      "am": "утра",
+      "formats": {
+        "default": "%a, %d %b %Y, %H:%M:%S %z",
+        "long": "%d %B %Y, %H:%M",
+        "short": "%d %b, %H:%M"
+      },
+      "pm": "вечера"
+    }
+  }
+}

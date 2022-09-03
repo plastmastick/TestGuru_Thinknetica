@@ -10,6 +10,7 @@ ru:
       delete: "Удалить"
       back: "Назад"
       next: "Далее"
+      cancel: "Отменить"
     tests:
       unknown: "Неизвестно"
       levels:

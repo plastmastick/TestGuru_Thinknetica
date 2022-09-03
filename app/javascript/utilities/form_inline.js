@@ -21,11 +21,11 @@ export class FormInline {
         if(formInline.classList.contains(('hide'))) {
             testTitle.classList.add('hide')
             formInline.classList.remove('hide')
-            link.value = 'Cancel'
+            link.value = I18n.t('helpers.buttons.cancel')
         } else {
             testTitle.classList.remove('hide')
             formInline.classList.add('hide')
-            link.value = 'Edit'
+            link.value = I18n.t('helpers.buttons.edit')
         }
     }
 

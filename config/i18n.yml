@@ -1,0 +1,9 @@
+---
+translations:
+  - file: app/javascript/i18n-js/locales.json
+    patterns:
+      - "*"
+      - "!*.activerecord"
+      - "!*.errors"
+      - "!*.number.nth"
+

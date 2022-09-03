@@ -39,7 +39,7 @@ ru:
 
   results:
     test_passage:
-      header: "Прохождения теста '%{title}'"
+      header: "Прохождениe теста '%{title}'"
     show:
       header: "Тест '%{title}' завершён!"
       your_score: "Ваш результат"

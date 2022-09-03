@@ -1,8 +1,27 @@
-<h1><%= t('.header', title: @result.test.title) %></h1>
-<p>
-  <%= result_info(@result) %>
-  <%= t('.your_score') %>
-  <span class=<%= pass_percentage_color(@result) %>> <%= @result.pass_percentage %>%</span>
-</p><br>
+<div class="mt-3">
+  <!--Header-->
+  <h2 class="text-center">
+    <%= t('.header', title: @result.test.title) %>
+  </h2>
+  <!--Header-->
 
-<p><%= link_to t('.tests_list'), tests_path %></p>
+  <!--Progress Bar-->
+  <div class="progress mt-3 pointer">
+    <div class="progress-bar test-progress-bar"
+         role="progressbar"
+         style="width: 100%">
+      100%
+    </div>
+  </div>
+  <!--Progress Bar-->
+
+  <div>
+    <p>
+      <%= result_info(@result) %>
+      <%= t('.your_score') %>
+      <span class=<%= pass_percentage_color(@result) %>> <%= @result.pass_percentage %>%</span>
+    </p><br>
+
+    <p><%= link_to t('.tests_list'), tests_path %></p>
+  </div>
+</div>

@@ -37,6 +37,7 @@ class Admin::TestsController < Admin::BaseController
     if @test.update(test_params)
       redirect_to [:admin, @test]
     else
+      set_test
       render :edit
     end
   end

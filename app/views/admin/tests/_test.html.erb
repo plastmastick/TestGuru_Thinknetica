@@ -1,21 +1,31 @@
 <tr>
-  <td id="row-number"><%= @tests.index(test) + 1 %></td>
-  <td id="title"><%= test.title %></td>
-  <td><%= test_level(test) %></td>
-  <td><%= test.category.title %></td>
-  <td><%= test.questions.count %></td>
-  <td><%= author_name(test) %></td>
-  <td><%= button_to t('helpers.buttons.show'),
-                    admin_test_path(test),
-                    method: :get %>
+  <td id="row-number" class="align-middle"><%= @tests.index(test) + 1 %></td>
+  <td id="title" class="align-middle">
+    <%= content_tag :span, test.title, class: 'test-title', data: { test_id: test.id } %>
+    <%= render 'form_inline', test: test == @test ? @test : test %>
   </td>
-  <td><%= button_to t('helpers.buttons.edit'),
-                    edit_admin_test_path(test),
-                    method: :get %>
+  <td class="align-middle"><%= test_level(test) %></td>
+  <td class="align-middle"><%= test.category.title %></td>
+  <td class="align-middle"><%= test.questions.count %></td>
+  <td class="align-middle"><%= author_name(test) %></td>
+  <td class="align-middle">
+    <%= button_to t('helpers.buttons.show'),
+                  admin_test_path(test),
+                  class: "btn btn btn-outline-primary fw-bold mt-3",
+                  method: :get %>
   </td>
-  <td><%= button_to t('helpers.buttons.delete'),
+  <td class="align-middle">
+    <%= button_to t('helpers.buttons.edit'),
+                  edit_admin_test_path(test),
+                  data: { test_id: test.id },
+                  class: 'form-inline-link btn btn btn-outline-primary fw-bold mt-3',
+                  method: :get %>
+  </td>
+  <td class="align-middle">
+    <%= button_to t('helpers.buttons.delete'),
                   admin_test_path(test),
                   :method => :delete,
+                  class: "btn btn btn-outline-primary fw-bold mt-3",
                   data: { confirm: t('.confirm') }%>
   </td>
 </tr>

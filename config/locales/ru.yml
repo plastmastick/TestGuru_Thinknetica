@@ -67,6 +67,8 @@ ru:
 
   admin:
     tests:
+      form_inline:
+        submit: 'ОК'
       test:
         confirm: "Вы уверены?"
       create:

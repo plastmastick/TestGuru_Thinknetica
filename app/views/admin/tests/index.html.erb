@@ -8,7 +8,9 @@
                   method: :get %>
   </p>
 
-  <table class="table mt-4">
+  <%= render 'shared/errors', resource: @test %>
+
+  <table id="table-tests" class="table mt-4">
     <thead class="table-light">
       <tr>
         <th scope="col">№</th>

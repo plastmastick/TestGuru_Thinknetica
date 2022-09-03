@@ -96,6 +96,8 @@ en:
 
   admin:
     tests:
+      form_inline:
+        submit: 'OK'
       test:
         confirm: "Are you sure?"
       create:

@@ -1,6 +1,6 @@
 import { TableSorting } from "./table_sorting"
 import { PasswordConfirmation } from "./password_confirmation"
-import { FormInline } from "./form_inline"
+import { FormInline } from "./form_inline.js.erb"
 import { ProgressBar } from "./progress_bar"
 
 document.addEventListener('turbolinks:load', function () {

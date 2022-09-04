@@ -12,11 +12,11 @@ export class FormInline {
         if(this.formInline.classList.contains(('hide'))) {
             this.testTitle.classList.add('hide')
             this.formInline.classList.remove('hide')
-            this.formInlineLink.value = I18n.t('helpers.buttons.cancel')
+            this.formInlineLink.value = "<%= I18n.t('helpers.buttons.cancel') %>"
         } else {
             this.testTitle.classList.remove('hide')
             this.formInline.classList.add('hide')
-            this.formInlineLink.value = I18n.t('helpers.buttons.edit')
+            this.formInlineLink.value = "<%= I18n.t('helpers.buttons.edit') %>"
         }
     }
 
@@ -25,7 +25,7 @@ export class FormInline {
 
         if (errors) {
             const resourceId = errors.dataset.resourceId
-            this.formInlineHandler(resourceId)
+            if (resourceId === this.testId) this.formInlineHandler()
         }
 
         this.formInlineLink.addEventListener('click', event => {

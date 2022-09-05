@@ -41,6 +41,7 @@ en:
       delete: "Delete"
       back: "Back"
       next: "Next"
+      cancel: "Cancel"
     tests:
       unknown: "Unknown"
       levels:
@@ -96,6 +97,8 @@ en:
 
   admin:
     tests:
+      form_inline:
+        submit: 'OK'
       test:
         confirm: "Are you sure?"
       create:

@@ -10,6 +10,7 @@ ru:
       delete: "Удалить"
       back: "Назад"
       next: "Далее"
+      cancel: "Отменить"
     tests:
       unknown: "Неизвестно"
       levels:
@@ -38,7 +39,7 @@ ru:
 
   results:
     test_passage:
-      header: "Прохождения теста '%{title}'"
+      header: "Прохождениe теста '%{title}'"
     show:
       header: "Тест '%{title}' завершён!"
       your_score: "Ваш результат"
@@ -67,6 +68,8 @@ ru:
 
   admin:
     tests:
+      form_inline:
+        submit: 'ОК'
       test:
         confirm: "Вы уверены?"
       create:

@@ -1,0 +1,36 @@
+export class FormInline {
+    constructor(formInlineLink) {
+        this.formInlineLink = formInlineLink
+        this.testId = this.formInlineLink.dataset.testId
+        this.testTitle = document.querySelector('.test-title[data-test-id="' + this.testId + '"]')
+        this.formInline = document.querySelector('.form-inline[data-test-id="' + this.testId + '"]')
+
+        this._setup()
+    }
+
+    formInlineHandler() {
+        if(this.formInline.classList.contains(('hide'))) {
+            this.testTitle.classList.add('hide')
+            this.formInline.classList.remove('hide')
+            this.formInlineLink.value = "<%= I18n.t('helpers.buttons.cancel') %>"
+        } else {
+            this.testTitle.classList.remove('hide')
+            this.formInline.classList.add('hide')
+            this.formInlineLink.value = "<%= I18n.t('helpers.buttons.edit') %>"
+        }
+    }
+
+    _setup() {
+        const errors = document.querySelector('.resource-errors')
+
+        if (errors) {
+            const resourceId = errors.dataset.resourceId
+            if (resourceId === this.testId) this.formInlineHandler()
+        }
+
+        this.formInlineLink.addEventListener('click', event => {
+            event.preventDefault()
+            this.formInlineHandler()
+        } )
+    }
+}

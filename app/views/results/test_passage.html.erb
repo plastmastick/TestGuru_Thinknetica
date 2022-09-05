@@ -1,24 +1,57 @@
-<h1><%= t('.header', title: @result.test.title ) %></h1>
+<div class="mt-3">
+  <!--Header-->
+  <h2 class="text-center">
+    <%= t('.header', title: @result.test.title ) %>
+  </h2>
+  <!--Header-->
 
-<b>
-  № <%= @result.test.questions.index(@result.current_question) + 1 %>
-  из <%= @result.test.questions.count %>.
-  <%= @result.current_question.body %>
-</b>
+  <!--Progress Bar-->
+  <div class="progress mt-3 pointer">
+    <div class="progress-bar test-progress-bar"
+         role="progressbar"
+         style="width: 0%">
+      0%
+    </div>
+  </div>
+  <!--Progress Bar-->
 
-<%= form_with url: result_path(@result), local: true, method: :put do |form| %>
-  <%= form.collection_check_boxes :answer_ids, @result.current_question.answers, :id, :body,
-   include_hidden: false do |b| %>
-    <p>
-      <%= b.check_box id: "answer_ids_#{b.object_id}" %>
-      <%= b.label %>
+  <!--Test Info-->
+  <div class="mt-3">
+    <b>
+      № <%= @result.test.questions.index(@result.current_question) + 1 %>
+      из <%= @result.test.questions.count %>.
+    </b>
+
+    <p class="mt-2">
+      <%= @result.current_question.body %>
     </p>
-  <% end %>
+  </div>
+  <!--Test Info-->
 
-  <p>
-    <%= link_to 'Gist Question', result_gists_path(@result), method: :post %>
-  </p>
-  <p>
-    <%= form.submit t('helpers.buttons.next') %>
-  </p>
-<% end %>
+  <!--Test form-->
+  <div>
+    <%= form_with url: result_path(@result),
+                  local: true,
+                  data: {
+                    question_index: @result.test.questions.index(@result.current_question),
+                    questions_count: @result.test.questions.count
+                  },
+                  method: :put do |form| %>
+      <%= form.collection_check_boxes :answer_ids, @result.current_question.answers, :id, :body,
+                                      include_hidden: false do |b| %>
+        <p>
+          <%= b.check_box id: "answer_ids_#{b.object_id}" %>
+          <%= b.label %>
+        </p>
+      <% end %>
+
+      <p>
+        <%= link_to 'Gist Question', result_gists_path(@result), method: :post %>
+      </p>
+      <p>
+        <%= form.submit t('helpers.buttons.next') %>
+      </p>
+    <% end %>
+  </div>
+  <!--Test form-->
+</div>

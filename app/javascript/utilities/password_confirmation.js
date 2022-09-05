@@ -45,8 +45,8 @@ export class PasswordConfirmation {
 
     // private
 
-    _setup(password_field) {
-        password_field.addEventListener('input', event => {
+    _setup(passwordField) {
+        passwordField.addEventListener('input', event => {
             if (this.passwordConfirmation.value !== '') this.checkPasswordConfirm()
             else this.resetStyleForInputs()
         } )

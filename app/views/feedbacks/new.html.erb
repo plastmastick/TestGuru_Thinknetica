@@ -1,0 +1,18 @@
+<div class="row justify-content-center mt-3">
+
+  <h2 class="text-center"><%= t('.header') %></h2>
+
+  <%= form_with model: @feedback,
+                locale: true do |f| %>
+
+    <div class="field">
+      <%= f.label :body %><br />
+      <%= f.text_area :body, autofocus: true %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit t('.send') %>
+    </div>
+  <% end %>
+
+</div>

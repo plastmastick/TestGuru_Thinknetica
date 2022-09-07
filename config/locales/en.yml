@@ -142,3 +142,4 @@ en:
     new:
       header: "TestGuru Feedback"
       send: "Send"
+      enter_feedback: "Enter feedback"

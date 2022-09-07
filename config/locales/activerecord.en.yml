@@ -8,6 +8,8 @@ en:
       user: "User"
 
     attributes:
+      feedback:
+        body: "Feedback"
       test:
         title: "Title"
         level: "Level"

@@ -113,3 +113,4 @@ ru:
     new:
       header: "Обратная связь по TestGuru"
       send: "Отправить"
+      enter_feedback: "Введите отзыв"

@@ -8,6 +8,8 @@ ru:
       user: "Пользователь"
 
     attributes:
+      feedback:
+        body: "Отзыв"
       test:
         title: "Название"
         level: "Уровень"

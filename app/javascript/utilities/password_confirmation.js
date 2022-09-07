@@ -1,45 +1,47 @@
 export class PasswordConfirmation {
     constructor(form) {
         this.form = form
-        this.password = form.elements.user_password
-        this.passwordConfirmation = form.elements.user_password_confirmation
-        this.passwords = [this.password, this.passwordConfirmation]
+        this.passwordDiv = form.querySelector('.password')
+        this.passwordConfirmationDiv = form.querySelector('.password-confirmation')
+        this.passwordDiv.password = form.elements.user_password
+        this.passwordConfirmationDiv.password = form.elements.user_password_confirmation
+        this.passwordsDiv = [this.passwordDiv, this.passwordConfirmationDiv]
 
-        this._setup(this.password)
-        this._setup(this.passwordConfirmation)
+        this._setup(this.passwordDiv.password)
+        this._setup(this.passwordConfirmationDiv.password)
     }
 
     checkPasswordConfirm() {
         this.resetStyleForInputs()
 
-        if (this.password.value !== this.passwordConfirmation.value) {
+        if (this.passwordDiv.password.value !== this.passwordConfirmationDiv.password.value) {
             // Passwords don't match
-            for (let i = 0; i < this.passwords.length; i++) {
-                this.passwords[i].parentElement.querySelector('.octicon-alert')
+            for (let i = 0; i < this.passwordsDiv.length; i++) {
+                this.passwordsDiv[i].querySelector('.octicon-alert')
                     .classList.remove('hide')
-                this.passwords[i].parentElement.classList.add('text-danger')
-                this.passwords[i].parentElement.querySelector('input').classList.add('border-danger')
+                this.passwordsDiv[i].classList.add('text-danger')
+                this.passwordsDiv[i].password.classList.add('border-danger')
             }
         } else {
             // Passwords match
-            for (let i = 0; i < this.passwords.length; i++) {
-                this.passwords[i].parentElement.querySelector('.octicon-check-circle-fill')
+            for (let i = 0; i < this.passwordsDiv.length; i++) {
+                this.passwordsDiv[i].querySelector('.octicon-check-circle-fill')
                     .classList.remove('hide')
-                this.passwords[i].parentElement.classList.add('text-success')
-                this.passwords[i].parentElement.querySelector('input').classList.add('border-success')
+                this.passwordsDiv[i].classList.add('text-success')
+                this.passwordsDiv[i].password.classList.add('border-success')
             }
         }
     }
 
     resetStyleForInputs() {
-        for (let i = 0; i < this.passwords.length; i++) {
-            this.passwords[i].parentElement.classList.remove('text-danger')
-            this.passwords[i].classList.remove('border-danger')
-            this.passwords[i].parentElement.classList.remove('text-success')
-            this.passwords[i].classList.remove('border-success')
+        for (let i = 0; i < this.passwordsDiv.length; i++) {
+            this.passwordsDiv[i].classList.remove('text-danger')
+            this.passwordsDiv[i].password.classList.remove('border-danger')
+            this.passwordsDiv[i].classList.remove('text-success')
+            this.passwordsDiv[i].password.classList.remove('border-success')
             // hide octicons
-            this.passwords[i].parentElement.querySelector('.octicon-alert').classList.add('hide')
-            this.passwords[i].parentElement.querySelector('.octicon-check-circle-fill').classList.add('hide')
+            this.passwordsDiv[i].querySelector('.octicon-alert').classList.add('hide')
+            this.passwordsDiv[i].querySelector('.octicon-check-circle-fill').classList.add('hide')
         }
     }
 
@@ -47,7 +49,7 @@ export class PasswordConfirmation {
 
     _setup(passwordField) {
         passwordField.addEventListener('input', event => {
-            if (this.passwordConfirmation.value !== '') this.checkPasswordConfirm()
+            if (this.passwordConfirmationDiv.password.value !== '') this.checkPasswordConfirm()
             else this.resetStyleForInputs()
         } )
     }

@@ -27,5 +27,9 @@ module TestGuru
 
     # Set default locale
     I18n.default_locale = :ru
+
+    add_error_div_proc = ActionView::Base.field_error_proc
+    config.action_view.field_error_proc = ->(html_tag, instance) {
+      html_tag && html_tag.start_with?("<label") ? html_tag : add_error_div_proc.call(html_tag, instance) }
   end
 end

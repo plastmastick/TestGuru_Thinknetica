@@ -18,6 +18,13 @@
           </li>
         <% end %>
         <!--Admin Menu-->
+        <!--User Menu-->
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to t('.feedback'), new_feedback_path, class: 'nav-link active' %>
+          </li>
+        <% end %>
+        <!--User Menu-->
       </ul>
     </div>
     <!--Menu-->

@@ -59,6 +59,7 @@ ru:
       login: "Авторизироваться"
       admin_panel: "Панель Администратора"
       gists: "Gists"
+      feedback: "Обратная связь"
     errors:
       header:
         few: "Обнаружено %{count} ошибки"
@@ -100,6 +101,16 @@ ru:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
 
+  feedbacks_mailer:
+    user_feedback:
+      subject: "Обратная связь от %{email}"
+
   services:
     gist_question_service:
       description: "Вопрос по тесту '%{title}' из TestGuru"
+
+  feedbacks:
+    new:
+      header: "Обратная связь по TestGuru"
+      send: "Отправить"
+      enter_feedback: "Введите отзыв"

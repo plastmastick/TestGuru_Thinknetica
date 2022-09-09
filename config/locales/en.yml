@@ -90,6 +90,7 @@ en:
       login: "Log in"
       admin_panel: "Admin Panel"
       gists: "Gists"
+      feedback: "Feedback"
     errors:
       header:
         one: "%{count} error detected"
@@ -129,6 +130,16 @@ en:
     completed_test:
       subject: "You just completed the TestGuru test!"
 
+  feedbacks_mailer:
+    user_feedback:
+      subject: "Feedback from %{email}"
+
   services:
     gist_question_service:
       description: "A question about %{title} from TestGuru"
+
+  feedbacks:
+    new:
+      header: "TestGuru Feedback"
+      send: "Send"
+      enter_feedback: "Enter feedback"

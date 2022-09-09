@@ -10,14 +10,14 @@ class User < ApplicationRecord
          :validatable,
          :confirmable
 
+  has_many :feedbacks, dependent: :destroy
   has_many :results, dependent: :destroy
   has_many :gists, dependent: :destroy
   has_many :tests, through: :results
   has_many :author_tests, class_name: "Test", foreign_key: :author_id,
                           dependent: :nullify, inverse_of: :author
 
-  REGEXP_EMAIL = /^(|(([A-Za-z0-9]+_+)|([A-Za-z0-9]+-+)|([A-Za-z0-9]+\.+)
-                  |([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6})$/i
+  REGEXP_EMAIL = /.+@.+\..+/i
 
   validates :first_name, presence: true
   validates :email, presence: true,

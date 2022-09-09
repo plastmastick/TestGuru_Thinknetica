@@ -1,0 +1,29 @@
+<div class="row justify-content-center mt-3">
+
+  <div class="col col-md-4">
+    <h2 class="text-center">
+        <%= t('.header') %>
+    </h2>
+
+    <div class="card border-primary mt-4">
+      <div class="card-body">
+          <%= form_with model: @feedback,
+                        locale: true do |f| %>
+
+            <div class="form-group">
+              <%= f.label :body %><br />
+              <%= f.text_area :body,
+                              autofocus: true,
+                              class: "form-control mt-2",
+                              placeholder: t('.enter_feedback')%>
+            </div>
+
+            <div class="actions mt-3 text-center">
+              <%= f.submit t('.send'), class: 'btn btn-primary' %>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -45,6 +45,12 @@ ru:
       your_score: "Ваш результат"
       tests_list: "Список тестов"
 
+  badges:
+    index:
+      header: "Бэйджи"
+      achieved: "Полученные"
+      all: "Все"
+
   gists:
     create:
       success: "Gist успешно создан: %{gist_url}"
@@ -60,6 +66,7 @@ ru:
       admin_panel: "Панель Администратора"
       gists: "Gists"
       feedback: "Обратная связь"
+      badges: "Бэйджи"
     errors:
       header:
         few: "Обнаружено %{count} ошибки"

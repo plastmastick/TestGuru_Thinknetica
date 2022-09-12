@@ -68,6 +68,12 @@ en:
       questions_count: "Questions"
       actions: "Actions"
 
+  badges:
+    index:
+      header: "Badges"
+      achieved: "Achieved"
+      all: "All"
+
   gists:
     create:
       success: "Gist was successfully created: %{gist_url}"
@@ -91,6 +97,7 @@ en:
       admin_panel: "Admin Panel"
       gists: "Gists"
       feedback: "Feedback"
+      badges: "Badges"
     errors:
       header:
         one: "%{count} error detected"

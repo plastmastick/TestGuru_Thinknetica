@@ -10,6 +10,7 @@ class User < ApplicationRecord
          :validatable,
          :confirmable
 
+  has_many :user_badges, dependent: :destroy
   has_many :feedbacks, dependent: :destroy
   has_many :results, dependent: :destroy
   has_many :gists, dependent: :destroy

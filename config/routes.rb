@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    resources :badges, except: :show
     resources :gists, only: :index
     resources :tests do
       patch :update_inline, on: :member

@@ -16,6 +16,9 @@
           <li class="nav-item">
             <%= link_to t('.gists'), admin_gists_path, class: 'nav-link active' %>
           </li>
+          <li class="nav-item">
+            <%= link_to t('.badges'), admin_badges_path, class: 'nav-link active' %>
+          </li>
           <!--Admin Menu-->
         <% elsif user_signed_in?%>
           <!--User Menu-->

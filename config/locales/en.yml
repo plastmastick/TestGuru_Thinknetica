@@ -69,6 +69,11 @@ en:
       actions: "Actions"
 
   badges:
+    rules:
+      first_attempt?: "Первая попытка прохождения теста"
+      all_tests_by_level?: "Все тесты одного уровня"
+      all_tests?: "Все тесты TestGuru"
+      all_backend_tests?: "Все тесты категории Backend"
     index:
       header: "Badges"
       achieved: "Achieved"
@@ -104,6 +109,20 @@ en:
         other: "%{count} errors detected"
 
   admin:
+    badges:
+      form:
+        enter_placeholder: "Enter %{field}"
+      create:
+        success: "Badge was successfully created"
+      edit:
+        header: "Edit '%{title}' badge"
+      new:
+        header: "New badge"
+      index:
+        header: "Badges"
+        achieved: "Achieved"
+        all: "All"
+        new_badge: "New badge"
     tests:
       form_inline:
         submit: 'OK'

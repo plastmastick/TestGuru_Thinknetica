@@ -2,9 +2,11 @@
 
   <h2 class="text-center"><%= t('.header') %></h2>
 
-  <div class="row justify-content-center mt-3">
-    <h4 class="text-center"><%= t('.achieved') %></h4>
-    <%= render @user_badges %>
+  <div class="text-center mt-3">
+    <%= button_to t('.new_badge'),
+                  new_admin_badge_path,
+                  class: 'btn btn-outline-primary fw-bold mb-3',
+                  method: :get %>
   </div>
 
   <div class="row justify-content-center mt-3">

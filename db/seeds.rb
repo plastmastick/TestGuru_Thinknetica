@@ -67,3 +67,17 @@ Result.create!(
     { test: tests[1], user: users[1] }
   ]
 )
+
+badges = Badge.create!(
+  [
+    { title: "Guru", description: "Complete all TestGuru test", rule: "all_tests?" },
+    { title: "Capable (Ruby)",
+      description: "Complete 'Ruby' test from first attempt",
+      rule: "first_attempt?",
+      option: "Ruby" }
+]
+)
+
+UserBadge.create!(
+  { badge: badges[0], user: users[0]}
+)

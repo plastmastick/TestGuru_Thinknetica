@@ -26,8 +26,10 @@ ActiveRecord::Schema.define(version: 2022_09_09_131010) do
 
   create_table "badges", force: :cascade do |t|
     t.string "title", null: false
+    t.string "description"
     t.string "img", default: "badge_default.jpeg", null: false
-    t.integer "rule", null: false
+    t.string "rule", null: false
+    t.string "option"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["title"], name: "index_badges_on_title", unique: true

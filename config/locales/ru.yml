@@ -46,6 +46,11 @@ ru:
       tests_list: "Список тестов"
 
   badges:
+    rules:
+      first_attempt?: "Первая попытка прохождения теста"
+      all_tests_by_level?: "Все тесты одного уровня"
+      all_tests?: "Все тесты TestGuru"
+      all_backend_tests?: "Все тесты категории Backend"
     index:
       header: "Бэйджи"
       achieved: "Полученные"
@@ -75,6 +80,20 @@ ru:
         other: "Обнаружено %{count} ошибок"
 
   admin:
+    badges:
+      form:
+        enter_placeholder: "Введите %{field}"
+      create:
+        success: "Бэйдж успешно создан"
+      edit:
+        header: "Изменить бэйдж '%{title}'"
+      new:
+        header: "Новый бэйдж"
+      index:
+        header: "Бэйджи"
+        achieved: "Полученные"
+        all: "Все"
+        new_badge: "Новый бэйдж"
     tests:
       form_inline:
         submit: 'ОК'

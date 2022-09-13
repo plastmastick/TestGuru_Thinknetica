@@ -91,6 +91,7 @@ en:
       header: "The '%{title}' Test was completed!"
       your_score: "Your score is"
       tests_list: "Test list"
+    badge_achieved: "You got a new badge"
 
   shared:
     nav:

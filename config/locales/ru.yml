@@ -44,6 +44,7 @@ ru:
       header: "Тест '%{title}' завершён!"
       your_score: "Ваш результат"
       tests_list: "Список тестов"
+    badge_achieved: "Вы получили новый бэйдж"
 
   badges:
     rules:

@@ -12,12 +12,20 @@ class ResultsController < ApplicationController
 
     if @result.test_passage_completed?
       @result.finish!
-      # BadgeAssignService.new(@result).call
+      assign_badge
       TestsMailer.completed_test(@result).deliver_now
       redirect_to result_path(@result)
     else
       render :test_passage
     end
+  end
+
+  def assign_badge
+    badges = BadgeAssignService.new(@result).call
+    return if badges.empty?
+
+    badges.each { |badge| @result.user.badges.push(badge) }
+    flash[:notice] = t('.badge_achieved')
   end
 
   private

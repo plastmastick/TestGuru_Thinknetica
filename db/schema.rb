@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_09_131010) do
+ActiveRecord::Schema.define(version: 2022_09_13_065832) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,8 @@ ActiveRecord::Schema.define(version: 2022_09_09_131010) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "current_question_id"
     t.integer "correct_questions", default: 0
+    t.decimal "score", precision: 13, scale: 2, default: "0.0", null: false
+    t.boolean "passed", default: false, null: false
     t.index ["current_question_id"], name: "index_results_on_current_question_id"
     t.index ["test_id"], name: "index_results_on_test_id"
     t.index ["user_id"], name: "index_results_on_user_id"

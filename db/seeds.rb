@@ -63,14 +63,14 @@ Answer.create!(
 
 Result.create!(
   [
-    { test: tests[0], user: users[0] },
-    { test: tests[1], user: users[1] }
+    { test: tests[0], user: users[0], score: 100, passed: true },
+    { test: tests[1], user: users[1], score: 100, passed: true }
   ]
 )
 
 badges = Badge.create!(
   [
-    { title: "Guru", description: "Complete all TestGuru test", rule: "all_tests?" },
+    { title: "Guru", description: "Complete all TestGuru test", rule: "all_tests_passed?" },
     { title: "Capable (Ruby)",
       description: "Complete 'Ruby' test from first attempt",
       rule: "first_attempt?",

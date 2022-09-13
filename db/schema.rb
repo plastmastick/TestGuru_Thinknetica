@@ -95,7 +95,6 @@ ActiveRecord::Schema.define(version: 2022_09_09_131010) do
   create_table "user_badges", force: :cascade do |t|
     t.bigint "badge_id", null: false
     t.bigint "user_id", null: false
-    t.boolean "achieved", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["badge_id"], name: "index_user_badges_on_badge_id"

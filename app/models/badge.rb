@@ -8,9 +8,4 @@ class Badge < ApplicationRecord
   validates :rule, presence: true
 
   RULES = %w[first_attempt? all_tests_by_level? all_tests? all_backend_tests?].freeze
-
-  def rules
-    RULES
-  end
-
 end

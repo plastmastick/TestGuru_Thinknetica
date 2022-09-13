@@ -11,7 +11,7 @@ class Result < ApplicationRecord
 
   def finish!
     self.score = pass_percentage
-    self.passed = true
+    self.passed = true if success_pass?
     save!
   end
 

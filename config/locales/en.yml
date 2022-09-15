@@ -68,6 +68,17 @@ en:
       questions_count: "Questions"
       actions: "Actions"
 
+  badges:
+    rules:
+      first_attempt?: "Первая попытка прохождения теста"
+      all_tests_by_level?: "Все тесты одного уровня"
+      all_tests?: "Все тесты TestGuru"
+      all_backend_tests?: "Все тесты категории Backend"
+    index:
+      header: "Badges"
+      achieved: "Achieved"
+      all: "All"
+
   gists:
     create:
       success: "Gist was successfully created: %{gist_url}"
@@ -80,6 +91,7 @@ en:
       header: "The '%{title}' Test was completed!"
       your_score: "Your score is"
       tests_list: "Test list"
+    badge_achieved: "You got a new badge"
 
   shared:
     nav:
@@ -91,12 +103,27 @@ en:
       admin_panel: "Admin Panel"
       gists: "Gists"
       feedback: "Feedback"
+      badges: "Badges"
     errors:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
 
   admin:
+    badges:
+      form:
+        enter_placeholder: "Enter %{field}"
+      create:
+        success: "Badge was successfully created"
+      edit:
+        header: "Edit '%{title}' badge"
+      new:
+        header: "New badge"
+      index:
+        header: "Badges"
+        achieved: "Achieved"
+        all: "All"
+        new_badge: "New badge"
     tests:
       form_inline:
         submit: 'OK'

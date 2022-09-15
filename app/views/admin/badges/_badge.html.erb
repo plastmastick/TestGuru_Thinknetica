@@ -1,0 +1,16 @@
+<div class="col-2 justify-content-center text-center card border-dark m-3">
+  <%= image_tag(badge.img, size:'200') %>
+  <%= content_tag :b, badge.title %>
+  <%= content_tag :p, badge.description %>
+  <% unless achieved %>
+    <%= button_to t('helpers.buttons.edit'),
+                  edit_admin_badge_path(badge),
+                  class: 'btn btn-outline-primary fw-bold mb-3',
+                  method: :get %>
+    <%= button_to t('helpers.buttons.delete'),
+                  admin_badge_path(badge),
+                  :method => :delete,
+                  class: "btn btn-outline-primary fw-bold mb-3",
+                  data: { confirm: t('.confirm') }%>
+  <% end %>
+</div>

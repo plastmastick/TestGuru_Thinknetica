@@ -9,6 +9,12 @@ class Result < ApplicationRecord
 
   SUCCESS_RATIO = 85
 
+  def finish!
+    self.score = pass_percentage
+    self.passed = true if success_pass?
+    save!
+  end
+
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
     save!

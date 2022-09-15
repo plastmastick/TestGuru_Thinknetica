@@ -11,4 +11,3 @@ class FeedbacksMailer < ApplicationMailer
     mail to: emails, subject: t('feedbacks_mailer.user_feedback.subject', email: @user.email)
   end
 end
-

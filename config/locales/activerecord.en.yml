@@ -1,6 +1,7 @@
 en:
   activerecord:
     models:
+      badge: "Badge"
       test: "Test"
       category: "Category"
       question: "Question"
@@ -8,6 +9,11 @@ en:
       user: "User"
 
     attributes:
+      badge:
+        title: "Title"
+        description: "Description"
+        rule: "Rule"
+        option: "Option"
       feedback:
         body: "Feedback"
       test:

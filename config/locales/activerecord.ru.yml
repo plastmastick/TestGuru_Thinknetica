@@ -1,6 +1,7 @@
 ru:
   activerecord:
     models:
+      badge: "Бэйдж"
       category: "Категория"
       test: "Тест"
       question: "Вопрос"
@@ -8,6 +9,11 @@ ru:
       user: "Пользователь"
 
     attributes:
+      badge:
+        title: "Название"
+        description: "Описание"
+        rule: "Правило"
+        option: "Опция"
       feedback:
         body: "Отзыв"
       test:

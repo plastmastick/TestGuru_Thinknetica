@@ -1,0 +1,56 @@
+<div class="row justify-content-center mt-3">
+
+  <div class="col col-md-4">
+    <%= render "shared/errors", resource: @badge %>
+
+    <div class="card border-primary mt-4">
+      <div class="card-body">
+        <%= form_with model: [:admin, @badge], locale: true do |f| %>
+          <div class="form-group">
+            <div class="mt-3">
+              <%= f.label :title %>
+              <%= f.text_field :title,
+                                autocomplete: "title",
+                                class: "form-control",
+                                placeholder: t('.enter_placeholder', field: t('activerecord.attributes.badge.title'))%>
+            </div>
+
+            <div class="mt-3">
+              <%= f.label :description %>
+              <%= f.text_field :description,
+                               autocomplete: "description",
+                               class: "form-control",
+                               placeholder: t('.enter_placeholder', field: t('activerecord.attributes.badge.description'))%>
+            </div>
+
+            <div class="mt-3">
+              <%= f.label :rule %>
+              <br>
+              <%= f.select :rule, Badge::RULES.map { |rule| [t("badges.rules.#{rule}"), rule] }, prompt: true %>
+            </div>
+
+            <div class="mt-3">
+              <%= f.label :option %>
+              <%= f.text_field :option,
+                               autocomplete: "option",
+                               class: "form-control",
+                               placeholder: t('activerecord.attributes.badge.option') %>
+            </div>
+
+            <div class="text-center mt-3">
+              <%= f.submit class: 'btn btn-primary' %>
+            </div>
+
+            <div class="text-center m-3">
+              <%= link_to t('helpers.buttons.back'),
+                            admin_badges_path,
+                            class: 'btn btn-outline-primary fw-bold',
+                            method: :get %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>

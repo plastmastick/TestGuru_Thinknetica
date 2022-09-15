@@ -8,23 +8,28 @@
     <!--Menu-->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <!--Admin Menu-->
         <% if current_user&.is_a?(Admin) %>
+          <!--Admin Menu-->
           <li class="nav-item">
             <%= link_to t('.admin_panel'), admin_tests_path, class: 'nav-link active' %>
           </li>
           <li class="nav-item">
             <%= link_to t('.gists'), admin_gists_path, class: 'nav-link active' %>
           </li>
-        <% end %>
-        <!--Admin Menu-->
-        <!--User Menu-->
-        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to t('.badges'), admin_badges_path, class: 'nav-link active' %>
+          </li>
+          <!--Admin Menu-->
+        <% elsif user_signed_in?%>
+          <!--User Menu-->
+          <li class="nav-item">
+            <%= link_to t('.badges'), badges_path, class: 'nav-link active' %>
+          </li>
           <li class="nav-item">
             <%= link_to t('.feedback'), new_feedback_path, class: 'nav-link active' %>
           </li>
+          <!--User Menu-->
         <% end %>
-        <!--User Menu-->
       </ul>
     </div>
     <!--Menu-->

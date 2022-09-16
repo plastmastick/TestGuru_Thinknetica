@@ -77,7 +77,8 @@ ActiveRecord::Schema.define(version: 2022_09_16_112649) do
     t.integer "correct_questions", default: 0
     t.decimal "score", precision: 13, scale: 2, default: "0.0", null: false
     t.boolean "passed", default: false, null: false
-    t.date "finish_until"
+    t.datetime "finish_until"
+    t.datetime "finish_at"
     t.index ["current_question_id"], name: "index_results_on_current_question_id"
     t.index ["test_id"], name: "index_results_on_test_id"
     t.index ["user_id"], name: "index_results_on_user_id"

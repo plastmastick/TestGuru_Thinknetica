@@ -33,6 +33,8 @@ en:
   hello: "Hello world"
 
   helpers:
+    placeholder:
+      enter_field: "Enter %{field}"
     alerts:
       not_authorized: 'You are not authorized to view this page'
     buttons:
@@ -111,8 +113,6 @@ en:
 
   admin:
     badges:
-      form:
-        enter_placeholder: "Enter %{field}"
       create:
         success: "Badge was successfully created"
       edit:

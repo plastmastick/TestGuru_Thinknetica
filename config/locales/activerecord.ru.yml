@@ -22,6 +22,8 @@ ru:
         category_id: "Категория"
         category: "Категория"
         author_id: "Автор"
+        timer: "Таймер"
+        time: "Время"
       question:
         body: "Содержимое"
       user:
@@ -36,3 +38,5 @@ ru:
     errors:
       messages:
         blank: "не может быть пустым"
+        positive: "должно быть положительным"
+        negative: "не может быть отрицательным"

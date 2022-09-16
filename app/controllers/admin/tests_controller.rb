@@ -33,10 +33,12 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def update
+    title = @test.title
+
     if @test.update(test_params)
       redirect_to [:admin, @test]
     else
-      set_test
+      @test.title = title
       render :edit
     end
   end
@@ -52,7 +54,7 @@ class Admin::TestsController < Admin::BaseController
   private
 
   def test_params
-    params.require(:test).permit(:title, :level, :category_id)
+    params.require(:test).permit(:title, :level, :category_id, :author_id, :timer, :time)
   end
 
   def set_tests

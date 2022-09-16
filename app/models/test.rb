@@ -12,6 +12,7 @@ class Test < ApplicationRecord
                     uniqueness: { scope: :level }
   validates :level, presence: true,
                     numericality: { greater_than: 0, only_integer: true }
+  validate :validate_time_positive
 
   scope :by_level, ->(value) { where(level: value) }
   scope :easy, -> { where(level: 0..1) }
@@ -25,5 +26,13 @@ class Test < ApplicationRecord
 
   def self.title_by_category(category_title)
     by_category(category_title).pluck(:title)
+  end
+
+  private
+
+  def validate_time_positive
+    return if time.positive?
+
+    errors.add(:time, :positive)
   end
 end

@@ -3,7 +3,6 @@
   <h2 class="text-center">
     <%= t('.header', title: @result.test.title ) %>
   </h2>
-  <!--Header-->
 
   <!--Progress Bar-->
   <div class="progress mt-3 pointer">
@@ -13,7 +12,13 @@
       0%
     </div>
   </div>
-  <!--Progress Bar-->
+
+  <!--Timer-->
+  <% if @result.test.timer %>
+    <div class="mt-3 text-center test-timer">
+      <%= timer_set(@result.time_left) %>
+    </div>
+  <% end %>
 
   <!--Test Info-->
   <div class="mt-3">
@@ -26,7 +31,6 @@
       <%= @result.current_question.body %>
     </p>
   </div>
-  <!--Test Info-->
 
   <!--Test form-->
   <div>
@@ -49,9 +53,8 @@
         <%= link_to 'Gist Question', result_gists_path(@result), method: :post %>
       </p>
       <p>
-        <%= form.submit t('helpers.buttons.next') %>
+        <%= form.submit t('helpers.buttons.next'), id: 'send-answer' %>
       </p>
     <% end %>
   </div>
-  <!--Test form-->
 </div>

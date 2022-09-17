@@ -6,7 +6,7 @@ class Result < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
   before_validation :before_validation_set_first_question, on: :create
   before_validation :before_validation_set_next_question, on: :update
-  before_create :set_finish_timer
+  before_create :before_create_set_finish_timer
 
   SUCCESS_RATIO = 85
 
@@ -23,7 +23,7 @@ class Result < ApplicationRecord
   end
 
   def test_passage_completed?
-    current_question.nil?
+    current_question.nil? || time_expired?
   end
 
   def pass_percentage
@@ -32,6 +32,13 @@ class Result < ApplicationRecord
 
   def success_pass?
     pass_percentage >= SUCCESS_RATIO
+  end
+
+  def time_left
+    return if test.timer == false
+
+    time = finish_until - Time.current
+    time.positive? ? time : 0
   end
 
   private
@@ -56,9 +63,15 @@ class Result < ApplicationRecord
     test.questions.order(:id).where('id > ?', current_question.id).first
   end
 
-  def set_finish_timer
+  def before_create_set_finish_timer
     return if test.timer == false
 
-    self.finish_until = (Time.zone.now + (test.time * 60))
+    self.finish_until = (Time.current + (test.time * 60))
+  end
+
+  def time_expired?
+    return false if test.timer == false
+
+    Time.zone.now > finish_until
   end
 end

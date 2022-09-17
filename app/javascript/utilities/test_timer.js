@@ -6,7 +6,6 @@ export class TestTimer {
         this._setup()
     }
 
-
     timerUpdate(that) {
         let min
         let sec

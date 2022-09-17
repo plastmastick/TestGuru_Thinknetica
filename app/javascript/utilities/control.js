@@ -2,7 +2,7 @@ import { TableSorting } from "./table_sorting"
 import { PasswordConfirmation } from "./password_confirmation"
 import { FormInline } from "./form_inline.js.erb"
 import { ProgressBar } from "./progress_bar"
-import { TestTimer} from './test_timer.js.erb'
+import { TestTimer} from './test_timer'
 
 document.addEventListener('turbolinks:load', function () {
     const sortTable = document.querySelector('#table-tests')

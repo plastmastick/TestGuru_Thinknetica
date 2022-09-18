@@ -25,7 +25,7 @@ ru:
         timer: "Таймер"
         time: "Время"
       question:
-        body: "Содержимое"
+        body: "Вопрос"
       user:
         email: "Почтовый адрес"
         first_name: "Имя"
@@ -34,6 +34,9 @@ ru:
         password_confirmation: "Подтвердите пароль"
       gist:
         url: "Gist URL"
+      answer:
+        body: "Ответ"
+        correct: "Правильный"
 
     errors:
       messages:

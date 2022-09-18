@@ -1,6 +1,7 @@
-<h1><%=question_header('new', @test) %></h1>
+<div class="container mt-3">
+  <h2 class="text-center">
+    <%= t('.header', test_title: @test.title) %>
+  </h2>
 
-<%= render 'form' %>
-<br>
-
-<%= link_to 'Back', admin_test_path(@test) %>
+  <%= render 'form' %>
+</div>

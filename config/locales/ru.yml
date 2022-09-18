@@ -112,17 +112,36 @@ ru:
         actions: "Действия"
         new_test: "Новый тест"
       show:
-        header: "Тест"
+        header: "Тест '%{title}'"
         questions: "Вопросы"
         new_question: "Новый вопрос"
         answers_count: "Ответов"
         actions: "Действия"
+      test_not_found: "Тест не найден"
     questions:
       question:
         confirm: "Вы уверены?"
+      show:
+        answers: "Ответы"
+        header: "Вопросы для '%{title}' теста"
+        new_answer: "Новый ответ"
+        actions: "Действия"
+      new:
+        header: "Новый вопрос для теста '%{test_title}'"
+      edit:
+        header: "Изменить вопрос из теста '%{test_title}'"
     gists:
       index:
         header: "Созданные Gist"
+    answers:
+      show:
+        header: "Ответ"
+      answer:
+        confirm: "Вы уверены?"
+      new:
+        header: "Новый ответ"
+      edit:
+        header: "Изменить ответ"
 
   tests_mailer:
     completed_test:

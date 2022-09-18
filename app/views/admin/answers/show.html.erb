@@ -1,18 +1,41 @@
-<h1>Question</h1>
+<div class="row justify-content-center mt-3">
+  <!--Header-->
+  <h2 class="text-center mt-3">
+    <%= t('.header') %>
+  </h2>
 
-<p>
-  <%= @answer.question.body %>
-</p>
+  <!--Card-->
+  <div class="card mt-2">
+    <!--Card header-->
+    <div class="text-center card-header row justify-content-center">
+      <div class="col-auto">
+        <strong><%= t('activerecord.attributes.question.body') %>:</strong>
+        <%= @question.body %>
+      </div>
 
-<p>
-  <strong>Answer:</strong>
-  <%= @answer.body %>
-</p>
+      <div class="col-auto">
+        <strong><%= t('activerecord.attributes.answer.body') %>:</strong>
+        <%= @answer.body %>
+      </div>
 
-<p>
-  <strong>Correct:</strong>
-  <%= @answer.correct %>
-</p><br>
+      <div class="col-auto">
+        <strong><%= t('activerecord.attributes.answer.correct') %>:</strong>
+        <%= @answer.correct %>
+      </div>
+    </div>
 
-<%= link_to 'Edit', edit_admin_answer_path(@answer) %> |
-<%= link_to 'Back', admin_question_path(@answer.question) %>
+    <!--Card footer-->
+    <div class="row card-footer">
+      <div class="text-center m-1">
+        <%= link_to t('helpers.buttons.back'),
+                    admin_question_path(@answer.question),
+                    class: 'btn btn-sm btn-outline-primary fw-bold' %>
+        <%= link_to t('helpers.buttons.edit'),
+                    edit_admin_answer_path(@answer),
+                    class: 'btn btn-sm btn-outline-primary fw-bold' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+

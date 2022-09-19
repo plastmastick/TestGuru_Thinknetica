@@ -23,15 +23,12 @@
         <%= author_name(@test) %>
       </div>
 
-      <div class="col-auto">
-        <strong><%= t('activerecord.attributes.test.timer') %>:</strong>
-        <%= @test.timer %>
-      </div>
-
-      <div class="col-auto">
-        <strong><%= t('activerecord.attributes.test.time') %>:</strong>
-        <%= @test.time %>
-      </div>
+      <% unless @test.time.blank? %>
+        <div class="col-auto">
+          <strong><%= t('activerecord.attributes.test.time') %>:</strong>
+          <%= @test.time %>
+        </div>
+      <% end %>
     </div>
 
     <!--Card footer-->

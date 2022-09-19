@@ -87,7 +87,7 @@ ru:
       create:
         success: "Бэйдж успешно создан"
       edit:
-        header: "Изменить бэйдж '%{title}'"
+        header: "Изменить бэйдж"
       new:
         header: "Новый бэйдж"
       index:
@@ -105,9 +105,9 @@ ru:
       new:
         header: "Создать новый тест"
       edit:
-        header: "Изменить '%{title}' Тест"
+        header: "Изменить тест"
       index:
-        header: "Доступные Тесты"
+        header: "Доступные тесты"
         questions_count: "Вопросов"
         actions: "Действия"
         new_test: "Новый тест"

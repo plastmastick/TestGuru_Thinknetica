@@ -116,7 +116,7 @@ en:
       create:
         success: "Badge was successfully created"
       edit:
-        header: "Edit '%{title}' badge"
+        header: "Edit badge"
       new:
         header: "New badge"
       index:
@@ -134,7 +134,7 @@ en:
       new:
         header: "Create new test"
       edit:
-        header: "Edit '%{title}' Test"
+        header: "Edit test"
       index:
         header: "Available Tests"
         questions_count: "Questions"

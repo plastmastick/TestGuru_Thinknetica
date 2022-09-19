@@ -40,5 +40,5 @@ en:
     errors:
       messages:
         blank: "can't be blank"
-        positive: "should be positive"
-        negative: "can't be negative"
+        positive: "should be positive number"
+        negative: "can't be negative number"

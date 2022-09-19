@@ -14,7 +14,7 @@
   </div>
 
   <!--Timer-->
-  <% if @result.test.timer %>
+  <% unless @result.test.time.blank? %>
     <div class="mt-3 text-center test-timer">
       <%= timer_set(@result.time_left) %>
     </div>

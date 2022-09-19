@@ -1,12 +1,22 @@
 <tr>
-  <td><%= @questions.index(question) + 1 %></td>
-  <td><%= question.body.capitalize %></td>
-  <td><%= question.answers.count %></td>
-  <td><%= link_to t('helpers.buttons.show'), admin_question_path(question) %></td>
-  <td><%= link_to t('helpers.buttons.edit'), edit_admin_question_path(question) %></td>
-  <td><%= link_to t('helpers.buttons.delete'),
-                  admin_question_path(question),
-                  :method => :delete,
-                  data: { confirm: t('.confirm') } %>
+  <td class="align-middle"><%= @questions.index(question) + 1 %></td>
+  <td class="align-middle"><%= question.body.capitalize %></td>
+  <td class="align-middle"><%= question.answers.count %></td>
+  <td class="align-middle">
+    <%= link_to t('helpers.buttons.show'),
+                admin_question_path(question),
+                class: "btn btn-outline-primary fw-bold" %>
+  </td>
+  <td class="align-middle">
+    <%= link_to t('helpers.buttons.edit'),
+                edit_admin_question_path(question),
+                class: "btn btn-outline-primary fw-bold"%>
+  </td>
+  <td class="align-middle">
+    <%= link_to t('helpers.buttons.delete'),
+                admin_question_path(question),
+                class: "btn btn-outline-primary fw-bold",
+                :method => :delete,
+                data: { confirm: t('.confirm') } %>
   </td>
 </tr>

@@ -1,12 +1,22 @@
 <tr>
-  <td><%= @answers.index(answer) + 1 %></td>
-  <td><%= answer.body %></td>
-  <td><%= answer.correct %></td>
-  <td><%= link_to 'Show', admin_answer_path(answer) %></td>
-  <td><%= link_to 'Edit', edit_admin_answer_path(answer) %></td>
-  <td><%= link_to 'Delete',
-                  admin_answer_path(answer),
-                  :method => :delete,
-                  data: { confirm: 'Are you sure?' }%>
+  <td class="align-middle"><%= @answers.index(answer) + 1 %></td>
+  <td class="align-middle"><%= answer.body %></td>
+  <td class="align-middle"><%= answer.correct %></td>
+  <td class="align-middle">
+    <%= link_to t('helpers.buttons.show'),
+                admin_answer_path(answer),
+                class: "btn btn-outline-primary fw-bold" %>
+  </td>
+  <td class="align-middle">
+    <%= link_to t('helpers.buttons.edit'),
+                edit_admin_answer_path(answer),
+                class: "btn btn-outline-primary fw-bold" %>
+  </td>
+  <td class="align-middle">
+    <%= link_to t('helpers.buttons.delete'),
+                admin_answer_path(answer),
+                class: "btn btn-outline-primary fw-bold",
+                :method => :delete,
+                data: { confirm: t('.confirm') } %>
   </td>
 </tr>

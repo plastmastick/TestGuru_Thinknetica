@@ -1,17 +1,56 @@
-<%= form_with model: [:admin, @question, @answer] do |form| %>
-  <%= render 'shared/errors', resource: @answer %>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4">
 
-  <div>
-    <p>
-      <%= form.label :body %><br>
-      <%= form.text_area :body, id: :answer_body, rows: 7, cols: 60 %>
-    </p><br>
+    <!--Errors-->
+    <div class="mt-3">
+      <%= render "shared/errors", resource: @answer %>
+    </div>
 
-    <p>
-      <%= form.label :correct %>:
-      <%= form.check_box :correct, id: :answer_correct %>
-    </p>
+    <!--Card-->
+    <div class="card border-primary mt-4">
+      <div class="card-body">
+        <%= form_with model: [:admin, @question, @answer], locale: true do |f| %>
+          <div class="form-group">
+            <div class="mt-3">
+              <%= f.label :body %>
+              <%= f.text_area :body,
+                               autocomplete: "body",
+                               id: :answer_body,
+                               rows: 7,
+                               cols: 60,
+                               class: "form-control",
+                               placeholder: t('helpers.placeholder.enter_field',
+                                              field: t('activerecord.attributes.answer.body'))%>
+            </div>
 
-    <%= form.submit %>
+            <div class="mt-3">
+              <%= f.label :correct, class: 'form-check-inline' %>
+              <%= f.check_box :correct,
+                              id: :answer_correct,
+                              class: "form-check-reverse" %>
+            </div>
+
+            <div class="text-center mt-3">
+              <%= f.submit class: 'btn btn-primary' %>
+            </div>
+
+            <div class="text-center m-3">
+              <%= link_to t('helpers.buttons.back'),
+                          admin_question_path(@answer.question),
+                          class: 'btn btn-outline-primary fw-bold',
+                          method: :get %>
+
+              <% if request.path.include?('edit') %>
+                <%= link_to t('helpers.buttons.show'),
+                            [:admin, @answer],
+                            class: 'btn btn-outline-primary fw-bold',
+                            method: :get %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-<% end %>
+</div>
+

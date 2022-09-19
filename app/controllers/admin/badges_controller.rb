@@ -27,7 +27,6 @@ class Admin::BadgesController < Admin::BaseController
     if @badge.update(badge_params)
       redirect_to admin_badges_path
     else
-      set_badge
       render :edit
     end
   end

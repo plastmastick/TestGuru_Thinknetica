@@ -35,7 +35,7 @@ class Result < ApplicationRecord
   end
 
   def time_left
-    return if test.timer == false
+    return if test.time.blank?
 
     time = finish_until - Time.current
     time.positive? ? time : 0
@@ -64,13 +64,13 @@ class Result < ApplicationRecord
   end
 
   def before_create_set_finish_timer
-    return if test.timer == false
+    return if test.time.blank?
 
     self.finish_until = (Time.current + (test.time * 60))
   end
 
   def time_expired?
-    return false if test.timer == false
+    return false if test.time.blank?
 
     Time.zone.now > finish_until
   end

@@ -11,21 +11,21 @@
   <td class="align-middle">
     <%= button_to t('helpers.buttons.show'),
                   admin_test_path(test),
-                  class: "btn btn btn-outline-primary fw-bold mt-3",
+                  class: "btn btn-outline-primary fw-bold",
                   method: :get %>
   </td>
   <td class="align-middle">
     <%= button_to t('helpers.buttons.edit'),
                   edit_admin_test_path(test),
                   data: { test_id: test.id },
-                  class: 'form-inline-link btn btn btn-outline-primary fw-bold mt-3',
+                  class: 'form-inline-link btn btn-outline-primary fw-bold',
                   method: :get %>
   </td>
   <td class="align-middle">
     <%= button_to t('helpers.buttons.delete'),
                   admin_test_path(test),
                   :method => :delete,
-                  class: "btn btn btn-outline-primary fw-bold mt-3",
+                  class: "btn btn-outline-primary fw-bold",
                   data: { confirm: t('.confirm') }%>
   </td>
 </tr>

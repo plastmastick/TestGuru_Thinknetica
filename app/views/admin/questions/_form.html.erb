@@ -1,10 +1,48 @@
-<%= form_with model: [:admin, @test, @question] do |form| %>
-  <%= render 'shared/errors', resource: @question %>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4">
 
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_field :body %>
-  </p>
+    <!--Errors-->
+    <div class="mt-3">
+      <%= render "shared/errors", resource: @answer %>
+    </div>
 
-  <%= form.submit %>
-<% end %>
+    <!--Card-->
+    <div class="card border-primary mt-4">
+      <div class="card-body">
+        <%= form_with model: [:admin, @test, @question], locale: true do |f| %>
+          <div class="form-group">
+            <div class="mt-3">
+              <%= f.label :body %>
+              <%= f.text_area :body,
+                              autocomplete: "body",
+                              rows: 7,
+                              cols: 60,
+                              class: "form-control",
+                              placeholder: t('helpers.placeholder.enter_field',
+                                             field: t('activerecord.attributes.question.body'))%>
+            </div>
+
+            <div class="text-center mt-3">
+              <%= f.submit class: 'btn btn-primary' %>
+            </div>
+
+            <div class="text-center m-3">
+              <%= link_to t('helpers.buttons.back'),
+                          admin_test_path(@question&.test || @test),
+                          class: 'btn btn-outline-primary fw-bold',
+                          method: :get %>
+
+              <% if request.path.include?('edit') %>
+                <%= link_to t('helpers.buttons.show'),
+                            [:admin, @question],
+                            class: 'btn btn-outline-primary fw-bold',
+                            method: :get %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

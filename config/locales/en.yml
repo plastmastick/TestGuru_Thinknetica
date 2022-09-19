@@ -116,7 +116,7 @@ en:
       create:
         success: "Badge was successfully created"
       edit:
-        header: "Edit '%{title}' badge"
+        header: "Edit badge"
       new:
         header: "New badge"
       index:
@@ -134,24 +134,43 @@ en:
       new:
         header: "Create new test"
       edit:
-        header: "Edit '%{title}' Test"
+        header: "Edit test"
       index:
         header: "Available Tests"
         questions_count: "Questions"
         actions: "Actions"
         new_test: "New test"
       show:
-        header: "Test"
+        header: "Test '%{title}'"
         questions: "Questions"
         new_question: "New question"
         answers_count: "Answers"
         actions: "Actions"
+      test_not_found: "Test wasn't found"
     questions:
       question:
         confirm: "Are you sure?"
+      show:
+        answers: "Answers"
+        header: "Questions for '%{title}' test"
+        new_answer: "New answer"
+        actions: "Actions"
+      new:
+        header: "New question for '%{test_title}' test"
+      edit:
+        header: "Edit question from '%{test_title}' test"
     gists:
       index:
         header: "Created Gists"
+    answers:
+      show:
+        header: "Answer"
+      answer:
+        confirm: "Are you sure?"
+      new:
+        header: "New answer"
+      edit:
+        header: "Edit answer"
 
   tests_mailer:
     completed_test:

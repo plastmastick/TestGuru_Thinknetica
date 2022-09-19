@@ -1,8 +1,13 @@
 <div class="row justify-content-center mt-3">
 
   <div class="col col-md-4">
-    <%= render "shared/errors", resource: @test %>
 
+    <!--Errors-->
+    <div class="mt-3">
+      <%= render "shared/errors", resource: @test %>
+    </div>
+
+    <!--Card-->
     <div class="card border-primary mt-4">
       <div class="card-body">
         <%= form_with model: [:admin, @test], locale: true do |f| %>
@@ -29,11 +34,6 @@
               <%= f.label :category_id %>
               <br>
               <%= f.collection_select :category_id, Category.all, :id, :title, prompt: true %>
-            </div>
-
-            <div class="mt-3">
-              <%= f.label :timer, class: 'form-check-inline' %>
-              <%= f.check_box :timer, class: "form-check-reverse" %>
             </div>
 
             <div class="mt-3">
@@ -66,6 +66,5 @@
         <% end %>
       </div>
     </div>
-
   </div>
 </div>

@@ -6,13 +6,13 @@ export class TestTimer {
         this._setup()
     }
 
-    timerUpdate(that) {
+    timerUpdate(htmlObject) {
         let min
         let sec
-        [min, sec] = that.testTimer.innerText.split(":")
+        [min, sec] = htmlObject.testTimer.innerText.split(":")
 
         if (sec <= 0 && min <= 0) {
-            that.sendAnswerButton.click()
+            htmlObject.sendAnswerButton.click()
             return
         }
 
@@ -27,15 +27,15 @@ export class TestTimer {
         if (min.length < 2) min = "0" + min
         if (sec < 10) sec = "0" + sec
 
-        that.testTimer.innerText = min + ":" + sec
+        htmlObject.testTimer.innerText = min + ":" + sec
         setTimeout(function () {
-            that.timerUpdate(that)
+            htmlObject.timerUpdate(htmlObject)
         }, 1000)
     }
 
     _setup() {
-        const that = this
+        const htmlObject = this
 
-        this.timerUpdate(that)
+        this.timerUpdate(htmlObject)
     }
 }

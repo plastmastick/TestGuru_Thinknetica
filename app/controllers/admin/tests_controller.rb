@@ -19,7 +19,7 @@ class Admin::TestsController < Admin::BaseController
   def create
     @test = current_user.author_tests.build(test_params)
     if @test.save
-      redirect_to [:admin, @test], notice: t('.success')
+      redirect_to admin_test_path(@test), notice: t('.success')
     else
       render :new
     end
@@ -33,12 +33,9 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def update
-    title = @test.title
-
     if @test.update(test_params)
-      redirect_to [:admin, @test]
+      redirect_to admin_test_path(@test)
     else
-      @test.title = title
       render :edit
     end
   end
@@ -54,7 +51,7 @@ class Admin::TestsController < Admin::BaseController
   private
 
   def test_params
-    params.require(:test).permit(:title, :level, :category_id, :author_id, :timer, :time)
+    params.require(:test).permit(:title, :level, :category_id, :timer, :time)
   end
 
   def set_tests
@@ -66,6 +63,6 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def rescue_with_test_not_found
-    render plain: 'Test was not found'
+    redirect_to admin_tests_path, alert: t('.test_not_found')
   end
 end

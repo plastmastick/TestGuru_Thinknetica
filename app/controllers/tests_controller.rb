@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class TestsController < ApplicationController
-  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
-
   def index
     @tests = Test.all
   end
@@ -21,9 +19,5 @@ class TestsController < ApplicationController
 
   def find_user_result
     Result.order(id: :desc).find_by(test: @test, user: current_user)
-  end
-
-  def rescue_with_test_not_found
-    render plain: 'Test was not found'
   end
 end

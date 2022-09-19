@@ -24,7 +24,7 @@ en:
         timer: "Timer"
         time: "Time"
       question:
-        body: "Body"
+        body: "Question"
       user:
         email: "Email"
         first_name: "First name"
@@ -33,9 +33,12 @@ en:
         password_confirmation: "Password confirmation"
       gist:
         url: "Gist URL"
+      answer:
+        body: "Answer"
+        correct: "Correct"
 
     errors:
       messages:
         blank: "can't be blank"
-        positive: "should be positive"
-        negative: "can't be negative"
+        positive: "should be positive number"
+        negative: "can't be negative number"

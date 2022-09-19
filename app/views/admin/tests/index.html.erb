@@ -1,20 +1,29 @@
 <div class="row justify-content-center mt-3">
 
-  <h2 class="text-center"><%= t('.header') %></h2>
+  <!--Header-->
+  <h2 class="text-center">
+    <%= t('.header') %>
+  </h2>
 
-  <p>
+  <!--Buttons-->
+  <div class="mt-3">
     <%= button_to t('.new_test'),
                   new_admin_test_path,
+                  class: 'btn btn-primary',
                   method: :get %>
-  </p>
+  </div>
 
-  <%= render 'shared/errors', resource: @test %>
+  <!--Errors-->
+  <div class="mt-3">
+    <%= render 'shared/errors', resource: @test %>
+  </div>
 
-  <table id="table-tests" class="table mt-4">
+  <!--Table-->
+  <table id="table-tests" class="table mt-3">
     <thead class="table-light">
       <tr>
         <th scope="col">№</th>
-        <th class="sort-by-title pointer">
+        <th class="col sort-by-title pointer">
           <%= t('activerecord.attributes.test.title') %>
           <%= octicon 'arrow-up', class: 'text-success hide' %>
           <%= octicon 'arrow-down', class: 'text-success' %>
@@ -31,5 +40,4 @@
     <%= render @tests %>
     </tbody>
   </table>
-
 </div>

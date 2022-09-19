@@ -31,7 +31,7 @@ class Test < ApplicationRecord
   private
 
   def validate_time_positive
-    return if time.positive?
+    return if time.blank? || time.positive?
 
     errors.add(:time, :positive)
   end

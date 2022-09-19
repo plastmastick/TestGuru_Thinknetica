@@ -1,7 +1,7 @@
-<h1><%= t('.header', title: @test.title) %></h1>
+<div class="container mt-3">
+  <h2 class="text-center">
+    <%= t('.header', title: @test.title) %>
+  </h2>
 
-<%= render 'form' %>
-<br>
-
-<%= link_to t('helpers.buttons.show'), admin_test_path(@test) %> |
-<%= link_to t('helpers.buttons.back'), admin_tests_path %>
+  <%= render 'form' %>
+</div>

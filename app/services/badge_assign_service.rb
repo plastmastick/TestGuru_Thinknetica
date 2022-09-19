@@ -14,11 +14,11 @@ class BadgeAssignService
 
   private
 
-  def all_tests_tried_to_pass?(option)
+  def all_tests_tried_to_pass?(_option)
     Test.all.count <= @user.results.pluck(:test_id).uniq.count
   end
 
-  def all_tests_passed?(option)
+  def all_tests_passed?(_option)
     Test.all.count <= @user.results.where(passed: true).pluck(:test_id).uniq.count
   end
 

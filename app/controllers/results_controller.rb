@@ -3,9 +3,13 @@
 class ResultsController < ApplicationController
   before_action :set_result, only: %i[show update test_passage]
 
-  def show; end
+  def show
+    redirect_to test_passage_result_path(@result) unless @result.test_passage_completed?
+  end
 
-  def test_passage; end
+  def test_passage
+    redirect_to result_path(@result) if @result.test_passage_completed?
+  end
 
   def update
     @result.accept!(params[:answer_ids])

@@ -19,6 +19,16 @@
   <%= author_name(@test) %>
 </p>
 
+<p>
+  <strong><%= t('activerecord.attributes.test.timer') %>:</strong>
+  <%= @test.timer %>
+</p>
+
+<p>
+  <strong><%= t('activerecord.attributes.test.time') %>:</strong>
+  <%= @test.time %>
+</p>
+
 <%= link_to t('helpers.buttons.edit'), edit_admin_test_path(@test) %> |
 <%= link_to t('helpers.buttons.back'), admin_tests_path %>
 <br>

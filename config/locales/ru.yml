@@ -2,6 +2,8 @@ ru:
   hello: "Привет мир"
 
   helpers:
+    placeholder:
+      enter_field: "Введите %{field}"
     alerts:
       not_authorized: 'Вы не авторизованы для просмотра этой страницы'
     buttons:
@@ -82,8 +84,6 @@ ru:
 
   admin:
     badges:
-      form:
-        enter_placeholder: "Введите %{field}"
       create:
         success: "Бэйдж успешно создан"
       edit:

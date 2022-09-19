@@ -21,6 +21,8 @@ en:
         level: "Level"
         category_id: "Category"
         author_id: "Author"
+        timer: "Timer"
+        time: "Time"
       question:
         body: "Body"
       user:
@@ -35,3 +37,5 @@ en:
     errors:
       messages:
         blank: "can't be blank"
+        positive: "should be positive"
+        negative: "can't be negative"

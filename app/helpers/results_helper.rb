@@ -16,4 +16,14 @@ module ResultsHelper
       'failed_pass'
     end
   end
+
+  def timer_set(time)
+    return if time.blank?
+
+    time = time.round
+    sec = time % 60
+    min = time / 60
+
+    "#{min}:#{sec}"
+  end
 end
